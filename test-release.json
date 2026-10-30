@@ -1,0 +1,19 @@
+{
+  "version": "0.1.1-dev",
+  "version_code": 2,
+  "package": "org.duoge.parkour",
+  "size_bytes": 67153733,
+  "sha256": "c4916e9c734e2d6ae976e92bd2cb7f5bc72586f16f03134033e3fd80bf840b5f",
+  "same_signing_certificate_as_0_1_dev": true,
+  "url": "downloads/duoge-parkour-0.1.1-dev-arm64.apk",
+  "status": "test",
+  "android_device_validation": "pending",
+  "changes": [
+    "拖动达到阈值立即响应，无需抬手",
+    "横向视野与刘海/手势区域适配",
+    "复用赛道、合批地面与减少阴影开销",
+    "避免身后火车车顶遮挡角色"
+  ],
+  "screen_test": "144 poses across 8 aspect ratios",
+  "default_release_replaced": false
+}
