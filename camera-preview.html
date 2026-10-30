@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1d31">
+<meta name="robots" content="noindex">
+<title>构图对比预览 · 舵哥快跑</title>
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1d31;color:#f8fbff;font:16px/1.65 system-ui,-apple-system,"Microsoft YaHei",sans-serif}main{max-width:1080px;margin:auto;padding:24px max(16px,env(safe-area-inset-right)) 40px max(16px,env(safe-area-inset-left))}a{color:#ffd06a}h1{font-size:clamp(25px,5vw,36px);margin:14px 0 8px}p{margin:8px 0 18px}.note{color:#bccbd9}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 12px}.tabs button{font:inherit;min-height:48px;padding:10px 16px;border:1px solid #6c8398;border-radius:12px;background:#163249;color:#f8fbff;cursor:pointer}.tabs button[aria-pressed=true]{color:#0b1d31;background:#ffd06a;border-color:#ffd06a}.tabs button:focus-visible{outline:3px solid white;outline-offset:3px}.frame{margin:0;padding:12px;background:#122b40;border-radius:16px;text-align:center}.frame img{display:block;width:auto;max-width:100%;height:auto;max-height:76svh;margin:auto;border-radius:8px}.frame figcaption{margin:12px 0 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.grid figure{min-width:0;margin:0}.grid img{display:block;width:100%;height:auto;border-radius:8px}.grid figcaption{text-align:center;padding-top:8px}h2{font-size:23px;margin-top:36px}details{border-top:1px solid #3c5267;padding:18px 0}summary{cursor:pointer;min-height:44px;color:#ffd06a}details img{width:100%;height:auto;display:block;margin-top:12px;border-radius:8px}footer{margin-top:28px;color:#bccbd9}@media(max-width:600px){.tabs button{flex:1;padding:10px 8px}.grid{gap:6px}.grid figcaption{font-size:14px}}
+</style>
+</head>
+<body><main>
+<a href="./">← 返回官方下载页</a>
+<h1>人物放在哪里，更顺眼？</h1>
+<p>同一场景、同一动作，比较旧版与两种新构图。</p>
+<p class="note">这是实际游戏画面的构图预览，安装包尚未更新。先选定喜欢的视角，再整合设置入口与车辆修复。</p>
+<div class="tabs" role="group" aria-label="选择构图">
+<button type="button" data-view="A" aria-pressed="true">A · 推荐</button>
+<button type="button" data-view="B" aria-pressed="false">B · 稍远</button>
+<button type="button" data-view="old" aria-pressed="false">旧版</button>
+</div>
+<figure class="frame"><a id="full-link" href="assets/camera-preview/A.webp" target="_blank" rel="noopener"><img id="main-image" src="assets/camera-preview/A.webp" width="405" height="900" fetchpriority="high" alt="方案A：人物更大、更靠近屏幕底部"></a><figcaption id="caption" aria-live="polite">A：人物更大、更靠下。点击图片可单独放大。</figcaption></figure>
+<h2>并排比较</h2>
+<div class="grid">
+<figure><a href="assets/camera-preview/old.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/old.webp" width="405" height="900" loading="lazy" alt="旧版构图"></a><figcaption>旧版</figcaption></figure>
+<figure><a href="assets/camera-preview/A.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/A.webp" width="405" height="900" loading="lazy" alt="方案A构图"></a><figcaption>A · 人物更近</figcaption></figure>
+<figure><a href="assets/camera-preview/B.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/B.webp" width="405" height="900" loading="lazy" alt="方案B构图"></a><figcaption>B · 多留路况</figcaption></figure>
+</div>
+<details><summary>查看边道人物与完整车辆</summary><a href="assets/camera-preview/edges.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/edges.webp" width="1271" height="1051" loading="lazy" alt="A方案左轨道、右轨道和完整邻车画面"></a></details>
+<details><summary>查看不同屏幕比例</summary><a href="assets/camera-preview/ratios.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/ratios.webp" width="1268" height="851" loading="lazy" alt="A方案在16:9、20:9、21:9与3:4平板的画面"></a></details>
+<details><summary>查看跑步、跳跃和滑铲姿态</summary><a href="assets/camera-preview/poses.webp" target="_blank" rel="noopener"><img src="assets/camera-preview/poses.webp" width="1271" height="1051" loading="lazy" alt="A方案的跑步、跳跃、滑铲暂停画面"></a></details>
+<footer>看完后回到聊天，告诉我喜欢哪种构图，或描述还想怎样调整。<br>马眼工作室出品 · 舵哥快跑</footer>
+</main>
+<script>
+const views={A:{text:'A：人物更大、更靠下。点击图片可单独放大。',alt:'方案A：人物更大、更靠近屏幕底部'},B:{text:'B：人物稍远一些，多留一点前方路况。点击图片可单独放大。',alt:'方案B：稍远的人物与更多前方路况'},old:{text:'旧版：人物偏小、偏高。点击图片可单独放大。',alt:'旧版：人物偏小且靠近画面中部'}};
+document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{const key=button.dataset.view;document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));const url='assets/camera-preview/'+key+'.webp';document.getElementById('main-image').src=url;document.getElementById('main-image').alt=views[key].alt;document.getElementById('full-link').href=url;document.getElementById('caption').textContent=views[key].text;}));
+</script></body></html>
