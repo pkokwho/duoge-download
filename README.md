@@ -1,16 +1,12 @@
 # 舵哥快跑官方下载站
 
+当前版本：0.1.4-dev / versionCode5 / org.duoge.parkour，Android7.0+ ARM64，48.9MiB。
 官网：https://pkokwho.github.io/duoge-download/
-公开静态站仓库：pkokwho/duoge-download。游戏源码继续私有，本站不包含源码、构建缓存或签名文件。
+下载：downloads/duoge-parkour-0.1.4-dev-arm64.apk
+SHA256：9c7375b4ee5eaac4507eeb2612be31785481a1dcc9c4af40d05ce5bbceae0c2a
 
-当前版本：0.1.3-dev / versionCode4 / org.duoge.parkour，Android7.0+ ARM64，58.2MiB。
-下载：downloads/duoge-parkour-0.1.3-dev-arm64.apk
-SHA256：22e38f0aedd5a1e3c8c3ba719b85cfb8afdc88c5b49fce444332d6bef34acba7
+0.1.4整合用户已在线验收的P2校园75秒挑战：单路线219金币、递进动作、两次4秒磁铁、目标120币。P1/P2在线试玩保留，今后每次更新先在线试玩、用户验收同意后再正式发布。
 
-首页、release.json、update.json、test/updater兼容入口均指向同一真实版本。旧APK保留为归档。旧0.1.1没有更新器，需手动覆盖安装一次；0.1.2可通过原检查更新入口升级。新版本在首页右上角设置中检查/下载，最终仍由安卓系统确认安装。
+旧纪录保留；同包名同原签名覆盖升级，无需卸载/清数据。0.1.2或更高在右上角设置/原更新入口检查更新，旧0.1.1需手动覆盖一次。下载和校验后仍由安卓系统确认安装。实机兼容和流畅度以用户手机为准，云端测试不代表所有品牌真机实测。
 
-更新：近景A构图、明确设置入口、完整车辆与已驶过车体整车淡出，保留触控和性能修复、原动画、旧最高分。同包名与证书已校验。云端1296网格姿态/8比例、设置/下载/存档及控制场景连续渲染通过；不等于已逐一测试所有品牌真机。
-
-发布顺序：先上传APK并验证公网完整SHA256，再提升网页和更新清单；不得先指向尚不存在的APK。发布更新时递增versionCode、保持签名，不要求卸载或清除数据。
-
-构图预览：camera-preview.html。图片使用WebP；无第三方追踪、新增付费服务或自有域名。
+发布顺序：先上传APK并验证完整公网SHA，再提升官网和更新清单；未来版本递增versionCode并保持原签名。私有源码、构建缓存和签名文件不在本站。旧APK及已发布试玩包保留为归档。无付费服务/自有域名。

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 4,
-  "version_name": "0.1.3-dev",
+  "version_code": 5,
+  "version_name": "0.1.4-dev",
   "package_name": "org.duoge.parkour",
   "min_android_sdk": 24,
-  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.3-dev-arm64.apk",
-  "sha256": "22e38f0aedd5a1e3c8c3ba719b85cfb8afdc88c5b49fce444332d6bef34acba7",
-  "size_bytes": 61040125,
-  "notes": "A方案近景：人物更大、更靠下，按安全区域与屏幕比例适配\n主菜单右上角设置，展示版本并提供检查更新\n恢复完整车体，仅对整辆已驶过的车辆短暂整车淡出\n保留触控响应、赛道性能优化、原主角动作与最高纪录"
+  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.4-dev-arm64.apk",
+  "sha256": "9c7375b4ee5eaac4507eeb2612be31785481a1dcc9c4af40d05ce5bbceae0c2a",
+  "size_bytes": 51248394,
+  "notes": "校园新场景与75秒单局挑战，采用用户已验收的P2玩法\n每段至多一条金币路线，219枚金币与递进跳跃、滑铲、换道组合\n两次磁铁每次4秒，120金币目标，关卡纪录与旧无尽纪录分开保留\n保留A构图、原主角动作、触控响应及设置内检查/下载更新"
 }
