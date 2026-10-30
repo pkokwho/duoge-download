@@ -1,0 +1,57 @@
+name: Publish verified download mirror
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/download-mirror.yml'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify and publish the existing APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os,json,urllib.request,hashlib
+          from pathlib import Path
+          repo='pkokwho/duoge-download'
+          filename='duoge-parkour-0.1.4-dev-arm64.apk'
+          expected='9c7375b4ee5eaac4507eeb2612be31785481a1dcc9c4af40d05ce5bbceae0c2a'
+          origin='https://pkokwho.github.io/duoge-download/downloads/'+filename
+          target=Path('/tmp')/filename
+          with urllib.request.urlopen(origin,timeout=60) as response,target.open('wb') as output:
+              while chunk:=response.read(262144):output.write(chunk)
+          assert target.stat().st_size==51248394
+          assert hashlib.file_digest(target.open('rb'),'sha256').hexdigest()==expected
+          print('Existing published APK full SHA verified')
+          def api(method,path,body=None,content_type='application/json'):
+              url=path if path.startswith('https://uploads.github.com/') else 'https://api.github.com/'+path
+              payload=json.dumps(body).encode() if body is not None and not isinstance(body,bytes) else body
+              headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'duoge-verified-download-mirror'}
+              if payload is not None:headers['Content-Type']=content_type
+              with urllib.request.urlopen(urllib.request.Request(url,data=payload,headers=headers,method=method),timeout=180) as response:return json.load(response)
+          releases=api('GET',f'repos/{repo}/releases?per_page=100')
+          release=next((r for r in releases if r['tag_name']=='v0.1.4'),None)
+          if release is None:
+              release=api('POST',f'repos/{repo}/releases',{'tag_name':'v0.1.4','target_commitish':'278ff7f375512b83c5664c53953a7ecd157d89c6','name':'舵哥快跑0.1.4-dev · 备用下载','draft':True,'body':'与官网0.1.4-dev完全相同的安装包，可覆盖安装，无需卸载。Android7.0+ ARM64。\n\nSHA-256：'+expected+'\n\n此入口用于比较下载线路，实际速度以手机网络为准。'})
+          release_id=release['id']
+          assets=api('GET',f'repos/{repo}/releases/{release_id}/assets')
+          files={filename:target.read_bytes(),'SHA256SUMS.txt':(expected+'  '+filename+'\n').encode()}
+          for name,data in files.items():
+              prior=next((a for a in assets if a['name']==name),None)
+              digest='sha256:'+hashlib.sha256(data).hexdigest()
+              if prior:
+                  assert prior['size']==len(data) and prior.get('digest')==digest,'Existing asset differs; refusing overwrite'
+              else:
+                  uploaded=api('POST',f'https://uploads.github.com/repos/{repo}/releases/{release_id}/assets?name={name}',data,'application/octet-stream')
+                  assert uploaded['state']=='uploaded' and uploaded['size']==len(data)
+                  if uploaded.get('digest'):assert uploaded['digest']==digest
+          if release['draft']:api('PATCH',f'repos/{repo}/releases/{release_id}',{'draft':False,'make_latest':'false'})
+          print('MIRROR PUBLISHED https://github.com/'+repo+'/releases/download/v0.1.4/'+filename)
+          PY
