@@ -1,0 +1,12 @@
+{
+  "version": "0.1.2-dev",
+  "version_code": 3,
+  "package": "org.duoge.parkour",
+  "min_android_sdk": 24,
+  "size_bytes": 61007357,
+  "sha256": "e9bf07d204c8a3f020307d30fcb47d52d57d2ba0e59b75924e4e0de75603aaa1",
+  "same_signing_certificate_as_0_1_1": true,
+  "url": "downloads/duoge-parkour-0.1.2-dev-arm64.apk",
+  "status": "updater-bootstrap-test",
+  "android_device_validation": "pending"
+}
