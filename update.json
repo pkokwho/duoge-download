@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "version_code": 2,
+  "version_name": "0.1.1-dev",
+  "package_name": "org.duoge.parkour",
+  "min_android_sdk": 24,
+  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.1-dev-arm64.apk",
+  "sha256": "c4916e9c734e2d6ae976e92bd2cb7f5bc72586f16f03134033e3fd80bf840b5f",
+  "size_bytes": 67153733,
+  "notes": "拖动达到阈值立即响应，无需抬手\n横向视野与刘海/手势区域适配\n复用赛道、合批地面与减少阴影开销\n避免身后火车车顶遮挡角色"
+}
