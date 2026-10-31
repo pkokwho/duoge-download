@@ -42,5 +42,7 @@
 - 用户授权只做双角色/选角预览/记住选择，并移除常驻金色脚下光环；整体UI重做延期。按既有流程先提供公开手机测试下载，确认后再提升正式入口。原.6安装/配色反馈不等于.7手机验证。
 - 源码功能提交 affd36e（master + feat/dual-characters）；新模型由 f9f0881 提供，已独立绑骨/烘焙四动作，原舵哥和校园资源/玩法/计分不变。选角偏好单独存 characters.cfg，不改成绩。源/实际APK双轮回归及Mobile/OpenGL实际渲染通过，证据见源码 docs/verification/0.1.7 与 DUAL-CHARACTERS.md。
 - 测试APK downloads/duoge-parkour-0.1.7-dev-arm64-standalone.apk：.7/code8，org.duoge.parkour.standalone，62,080,826 bytes（59.2MiB），SHA cd9c982ca39e3ef1935d70adbcb9f084827bab9d60745668602006c1be1012f5，证书继续05bfb8a...同一独立签名。可直接更新.5/.6独立版；原.4边界不变。
-- 仅新增已签名APK/SHA、test-0.1.7.html 和选角截图；基线main=18c847f。正式首页/release/routes/update-standalone.json保持.6，旧update.json和所有旧APK不变。本次推送前已核对本地SHA，远端完整下载/Pages待执行，不能提前写成功。
+- 仅新增已签名APK/SHA、test-0.1.7.html 和选角截图；基线main=18c847f。正式首页/release/routes/update-standalone.json保持.6，旧update.json和所有旧APK不变。测试上传提交 bf5246840adb91c568ee6a503d5c8d7a6bfbaf2c 已推送（18c847f→bf52468）；远端公开APK完整下载HTTP200，大小/SHA/签名一致，远端测试HTML逐字节一致。Pages https://github.com/pkokwho/duoge-download/actions/runs/41178787480 标题对应bf52468，已观察到Success。本提交只回写真实证据；云环境仍未直接核验官网CDN内容。
 - 手机链接目标 https://pkokwho.github.io/duoge-download/test-0.1.7.html ，备用为Raw main/downloads/下同名APK。只发布公开产物，不发布私钥/备份/authoring文件；每次推送/发布同步记忆。
+
+- .7测试页本地Chromium360×800和1280×900检查下载链接、实际包截图加载、无横向溢出/JS错误通过。手机.7体验尚未反馈，正式入口保持.6；下一步让用户试选角、跑跳滑铲与重启记忆，正常后再按授权提升正式入口并同步记忆。
