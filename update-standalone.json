@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 6,
-  "version_name": "0.1.5-dev",
+  "version_code": 7,
+  "version_name": "0.1.6-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
-  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.5-dev-arm64-standalone.apk",
-  "sha256": "dcbd7d776368a0770a224170b3f4ed7e75ebb725a746b7ff06594642189d6f51",
-  "size_bytes": 55017643,
-  "notes": "更换游戏图标，使用新版《舵哥快跑》图案。\n检查更新时显示版本公告，已是最新版或暂时离线时也可查看本版本说明。\n保留75秒校园挑战、单路线金币、磁铁与原角色动作。\n本次为独立新版，可与旧版并存，无需卸载旧版；旧纪录保留在旧游戏中，新版不自动导入。"
+  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.6-dev-arm64-standalone.apk",
+  "sha256": "047d88d122231a8538223dc107b1e0d978bfb80da389aae797fec4c995c506e4",
+  "size_bytes": 55115947,
+  "notes": "修复校园建筑、树木、障碍、金币和道具变白的问题，恢复原始配色。\n保持场景造型、碰撞、75秒校园挑战与原有角色动作。\n沿用新版图标，检查更新可查看修复公告，并保存本版本最高纪录。\n已安装0.1.5独立新版可直接更新；原版0.1.4与新版分开安装，旧纪录保留在旧游戏中，新版不自动导入。"
 }

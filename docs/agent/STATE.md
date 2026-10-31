@@ -1,31 +1,38 @@
 # 下载站交接记忆
 
-- 日期：2026-10-31（Asia/Shanghai）。用户明确授权发布独立新版官网及在线更新入口，并要求每次推送/发布更新记忆。
-- 仓库：`pkokwho/duoge-download`，分支 `main`。阶段 1 包文件提交 `48334a7` 已推送；源码交接规则/授权提交：`pkokwho/duoduo-parkour@029b432`；游戏功能提交 `25a2851`。
-- 发布内容提交 `88d1fec` 已推送并成功部署：首页、备用下载和 `release.json` 已提升到独立新版；独立清单 `update-standalone.json` 已发布。Pages 运行 `41156020066` 对 `88d1fec` 显示 Success（https://github.com/pkokwho/duoge-download/actions/runs/41156020066）。以上为 0.1.5 正式入口的历史发布证据；新增 0.1.6 测试下载，见下节。
-- 目标版本：`0.1.5-dev` / 6，独立包名 `org.duoge.parkour.standalone`，应用名“舵哥快跑（新版）”。Android 10+ / ARM64，55,017,643 字节。
-- 文件：`downloads/duoge-parkour-0.1.5-dev-arm64-standalone.apk`。
-- APK SHA-256：`dcbd7d776368a0770a224170b3f4ed7e75ebb725a746b7ff06594642189d6f51`。
-- 签名证书 SHA-256：`05bfb8a25e259e4d7a63bae05dc347e28523e8197e79afa84d82414b65c4e88d`。本站仅发布安装包和公开元数据，绝不发布签名私钥/备份。
-- 已有验证：签名、ZIP CRC/重复条目、16KiB 对齐、原生插件/Provider、图标、游戏冒烟及双通道回归通过。发布 JSON 用实际客户端验证当前公告/升级/SDK/旧包拒绝通过；Chromium 360×800 与 1280×900 页面下载、安装提示、资源响应、无 JS 错误/横向溢出检查通过。真机试装未执行，不得标为通过。
-- 保留 `update.json` 的 0.1.4 原包名渠道和全部旧包；将新增 `update-standalone.json` 供独立新版检查更新。新版不自动继承旧纪录；旧游戏/旧纪录保留，不要求卸载。
-- 远端证据：公开 Raw APK 完整下载后大小、SHA 和签名一致；远端实际 `update-standalone.json` 与发布文件一致；`88d1fec` 的远端首页与本地发布页面逐字节一致。阶段 1 Pages 运行 `41155569168` 也成功。直接官网 CDN HTTP 仍被开发环境策略拦截，不能说已直接核验 CDN。
-- 公开入口：https://pkokwho.github.io/duoge-download/ ；https://pkokwho.github.io/duoge-download/update-standalone.json 。官网默认包为独立版；未来升级沿用独立签名。旧 `update.json` 及全部旧 APK 保留不变，元数据归档为 `release-0.1.4.json`、`download-routes-0.1.4.json`。
-- 下一步：同步源码仓库 STATE/发布记录；如用户反馈安装问题再做真机诊断。以后每次推送/发布继续更新记忆。不要擅自重签现有包、混用更新通道或修改已发布的不可变 APK。
-- 云环境当前不允许直接 HTTP 访问官网域名，已保存必要域名的开发环境网络草稿但未应用。不得绕过策略；可以核对 GitHub 仓库实际对象，直接官网 HTTP 仍需单独确认。
+- 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
+- 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 错误与注意
+## 当前发布：0.1.6-dev 正式入口提升
 
-- Git 推送不是 Pages 部署成功的证据；Raw 校验也不是官网 CDN 已刷新证据。
-- GitHub 托管的不同入口不能承诺中国大陆高速；没有实际手机测速就标为未验证。
-- 必须区分独立安装和覆盖升级，避免旧版客户端下载错误包。
+- 版本 0.1.6-dev / 7，包名 `org.duoge.parkour.standalone`，名称“舵哥快跑（新版）”；ARM64 / Android 10+，API 29/36。
+- APK：`downloads/duoge-parkour-0.1.6-dev-arm64-standalone.apk`，55,115,947 bytes（52.6 MiB）。复用手机确认的原测试包，不重构/重签/覆盖已发布文件。
+- SHA-256：`047d88d122231a8538223dc107b1e0d978bfb80da389aae797fec4c995c506e4`。
+- 证书 SHA-256：`05bfb8a25e259e4d7a63bae05dc347e28523e8197e79afa84d82414b65c4e88d`，与 0.1.5 相同，可直接更新该独立版。私钥/备份绝不上传本站或源码。
+- 修复：14 个模型恢复原始顶点颜色，保留几何、玩法、角色动作。源码功能修复 41ef962，公开测试交接 70cabed。证据见源码 docs/verification/0.1.6/README.md。
+- 本次从 main=54a094f 提升首页、备用下载、release.json、download-routes.json、update-standalone.json；公告写明白模修复、配色恢复、保留玩法动作与独立安装边界。测试页同步“已转为默认版本”。历史 0.1.5 元数据新增归档 release-0.1.5.json / download-routes-0.1.5.json。
+- 推送前通过：清单/所有当前下载链接与真实 APK 的版本、大小、SHA 一致；真实 0.1.5 客户端可识别升级，真实 0.1.6 可显示当前修复公告；SDK、错误包名、禁止降级检查通过。Chromium 360×800、1280×900 首页/备用页链接及公告正确，无横向溢出或 JS 错误。
+- 当前阶段：准备推送正式入口；实际推送、Pages 部署及远端发布内容核验待执行，不能提前写成功。后续记录实际提交、运行和文件验证，再同步源码记忆。
 
-## 0.1.6 白模修复：公开测试下载阶段
+## 入口与更新边界
 
-- 用户指出云环境内部文件路径无法在手机访问；要求提供可在手机实际下载的公开入口。当前授权上传 0.1.6 测试包和测试页面，手机确认后再提升官网默认下载与游戏内更新清单。无需重复索取上传许可。
-- 源码修复已推送 `pkokwho/duoduo-parkour@41ef962`，交接 `6f765d6`。14 个模型缺失的 COLOR_0 已恢复；71,601 原色顶点及原几何对应一致，玩法/动作/存档逻辑未改。源码和实际包两轮回归、Mobile/Vulkan 与 OpenGL 实际渲染通过，详情见源码 docs/verification/0.1.6/README.md。
-- 测试包：`downloads/duoge-parkour-0.1.6-dev-arm64-standalone.apk`，0.1.6-dev / 7，`org.duoge.parkour.standalone`，55,115,947 字节，ARM64/Android 10+。
-- SHA-256：`047d88d122231a8538223dc107b1e0d978bfb80da389aae797fec4c995c506e4`；证书沿用上文独立版指纹，可更新 0.1.5 独立版，不能覆盖原包名 0.1.4。
-- 公开测试页面目标：https://pkokwho.github.io/duoge-download/test-0.1.6.html 。直接测试 APK 链接为本站 downloads/ 下上述新文件；同时提供 GitHub Raw 备用下载。仅公开已签名 APK、SHA 和测试说明，绝不上传私钥。
-- 实际测试上传提交 `26558cad363fce6e2ae7f98b3586ada1452ee057` 已推送（518baee→26558ca）；远端 Raw 完整下载为 HTTP 200，55,115,947 字节、SHA 与证书均通过。Pages 运行 `41161142852`（https://github.com/pkokwho/duoge-download/actions/runs/41161142852）已观察到 Success，页面标题对应 26558ca。测试 APK 与专用页面已部署；本提交只回写部署证据。直接官网 CDN 在本环境仍被策略限制，未冒充直接 CDN 内容核验。首页、release.json、备用正式入口和 update-standalone.json 保持 0.1.5；update.json 与旧包不改。手机尚未验证；确认配色后再正式提升，并逐次更新记忆。
-- 教训：工作区本地文件链接无法满足手机安装。需要先发布独立测试下载，正式入口可继续保持原版本；不能用“等待真机验证”阻断获得真机测试包。
+- 官网：https://pkokwho.github.io/duoge-download/
+- 独立游戏内更新：https://pkokwho.github.io/duoge-download/update-standalone.json
+- 备用下载：https://pkokwho.github.io/duoge-download/download-lines.html
+- 专用测试下载：https://pkokwho.github.io/duoge-download/test-0.1.6.html
+- 原包名 `org.duoge.parkour` 的 `update.json` 保持 0.1.4；所有旧 APK 保留。原版与独立新版并存，旧纪录保留但不自动导入，不要求卸载。
+- 原 0.1.4 私钥缺失，无法提供同签名覆盖升级；旧版游戏内更新目标仍未解决。不能伪造包名、版本或签名让旧客户端接受独立包。
+- 云环境 HTTP 仍限制直接访问官网 CDN 和 GitHub API；运行时观察 enforced，官网不在允许域名。使用 GitHub/Raw/Actions 验证，不能冒充直接 CDN 实测；网络配置草稿未应用。
+
+## 已完成的测试发布与历史证据
+
+- 0.1.6 APK/测试页上传 `26558cad363fce6e2ae7f98b3586ada1452ee057`，记忆回写 `54a094f`。Raw 完整下载 HTTP 200，大小/SHA/签名核对通过。
+- 测试 Pages https://github.com/pkokwho/duoge-download/actions/runs/41161142852 对 26558ca 显示 Success；随后用户在手机确认“都正常”。
+- 历史 0.1.5：资产 48334a7，正式页面/独立清单 88d1fecc869a658babe796494aef9a3846452d3e，交接 518baee；Pages 41155569168、41156020066、41156243455 均 Success。该版遗漏颜色是已确认问题，.6 已修复，旧 APK 保留。
+
+## 错误教训
+
+- 工作区路径无法作为手机可用下载；先发布独立测试链接，再要求手机确认，可晚于它提升正式清单。
+- 无窗口/签名/CRC 不证明画面正常；资源恢复要检查 COLOR_0 和实际导出包渲染。
+- Git 推送不是 Pages 成功；Raw 校验不是 CDN 已刷新。没有手机测速就不承诺大陆高速。
+- 遇到本地稀疏检出新 APK，使用 git add --sparse 显式暂存；不要为了消除警告引入私钥或改用占位 LFS 文件。
