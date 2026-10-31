@@ -3,3 +3,11 @@
 @media(max-width:600px){.city{background-image:linear-gradient(180deg,#06355433,#09253955),url(assets/city-480.webp)}}
 
 .install-notice{display:flex;gap:14px;align-items:flex-start;margin:18px 0;padding:14px;border:1px solid #40596a;border-radius:14px;background:#102941;color:#f8fbff;font-size:14px;line-height:1.7}.install-notice img{flex:none;border-radius:14px}.install-notice p{margin:0}.install-notice a{color:#ffd06a}.legacy-release p{max-width:720px;line-height:1.8;color:var(--muted)}.legacy-release .text-link{display:inline-block;margin-top:12px}
+
+/* 下载线路选择 */
+.route-picker{margin:14px 0 0}
+.route-tip{font-size:13px;color:#8aa0b4;margin:0 0 8px}
+.route-row{display:flex;gap:8px;flex-wrap:wrap}
+.route{flex:1 1 140px;text-align:center;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#cfe0ef;font-size:13px;text-decoration:none;transition:background .15s}
+.route:hover{background:rgba(255,255,255,.14)}
+@media(max-width:520px){.route{flex:1 1 100%}}
