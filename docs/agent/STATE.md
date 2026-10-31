@@ -27,5 +27,5 @@
 - 测试包：`downloads/duoge-parkour-0.1.6-dev-arm64-standalone.apk`，0.1.6-dev / 7，`org.duoge.parkour.standalone`，55,115,947 字节，ARM64/Android 10+。
 - SHA-256：`047d88d122231a8538223dc107b1e0d978bfb80da389aae797fec4c995c506e4`；证书沿用上文独立版指纹，可更新 0.1.5 独立版，不能覆盖原包名 0.1.4。
 - 公开测试页面目标：https://pkokwho.github.io/duoge-download/test-0.1.6.html 。直接测试 APK 链接为本站 downloads/ 下上述新文件；同时提供 GitHub Raw 备用下载。仅公开已签名 APK、SHA 和测试说明，绝不上传私钥。
-- 推送前基线 main=518baee；本阶段待推送/待部署/待远端完整下载核验。首页、release.json、备用正式入口和 update-standalone.json 保持 0.1.5；update.json 与旧包不改。手机尚未验证；确认配色后再正式提升，并逐次更新记忆。
+- 实际测试上传提交 `26558cad363fce6e2ae7f98b3586ada1452ee057` 已推送（518baee→26558ca）；远端 Raw 完整下载为 HTTP 200，55,115,947 字节、SHA 与证书均通过。Pages 运行 `41161142852`（https://github.com/pkokwho/duoge-download/actions/runs/41161142852）已观察到 Success，页面标题对应 26558ca。测试 APK 与专用页面已部署；本提交只回写部署证据。直接官网 CDN 在本环境仍被策略限制，未冒充直接 CDN 内容核验。首页、release.json、备用正式入口和 update-standalone.json 保持 0.1.5；update.json 与旧包不改。手机尚未验证；确认配色后再正式提升，并逐次更新记忆。
 - 教训：工作区本地文件链接无法满足手机安装。需要先发布独立测试下载，正式入口可继续保持原版本；不能用“等待真机验证”阻断获得真机测试包。
