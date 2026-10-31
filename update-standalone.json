@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "version_code": 6,
+  "version_name": "0.1.5-dev",
+  "package_name": "org.duoge.parkour.standalone",
+  "min_android_sdk": 29,
+  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.5-dev-arm64-standalone.apk",
+  "sha256": "dcbd7d776368a0770a224170b3f4ed7e75ebb725a746b7ff06594642189d6f51",
+  "size_bytes": 55017643,
+  "notes": "更换游戏图标，使用新版《舵哥快跑》图案。\n检查更新时显示版本公告，已是最新版或暂时离线时也可查看本版本说明。\n保留75秒校园挑战、单路线金币、磁铁与原角色动作。\n本次为独立新版，可与旧版并存，无需卸载旧版；旧纪录保留在旧游戏中，新版不自动导入。"
+}

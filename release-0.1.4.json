@@ -1,0 +1,20 @@
+{
+  "version": "0.1.4-dev",
+  "version_code": 5,
+  "package": "org.duoge.parkour",
+  "min_android_sdk": 24,
+  "size_bytes": 51248394,
+  "sha256": "9c7375b4ee5eaac4507eeb2612be31785481a1dcc9c4af40d05ce5bbceae0c2a",
+  "same_signing_certificate_as_0_1_1": true,
+  "url": "downloads/duoge-parkour-0.1.4-dev-arm64.apk",
+  "status": "current-development",
+  "android_device_validation": "pending",
+  "changes": [
+    "校园新场景与75秒单局挑战，采用用户已验收的P2玩法",
+    "每段至多一条金币路线，219枚金币与递进跳跃、滑铲、换道组合",
+    "两次磁铁每次4秒，120金币目标，关卡纪录与旧无尽纪录分开保留",
+    "保留A构图、原主角动作、触控响应及设置内检查/下载更新"
+  ],
+  "screen_test": "accepted P2 Web play; real collision reward/survival runs; formal menu/settings/replay and save checks",
+  "published_date": "2026-10-30"
+}
