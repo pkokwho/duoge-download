@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "project": null,
+  "github_repository": "pkokwho/duoge-download",
+  "setup_status": "awaiting_account_owner_github_import_authorization",
+  "official_setup_url": "https://sourceforge.net/p/import_project/github/"
+}

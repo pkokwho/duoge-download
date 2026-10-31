@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "github_repository": "pkokwho/duoge-download",
+  "certificate_sha256": "05bfb8a25e259e4d7a63bae05dc347e28523e8197e79afa84d82414b65c4e88d",
+  "package_name": "org.duoge.parkour.standalone",
+  "releases": [
+    {
+      "tag": "v0.1.6-standalone",
+      "version_name": "0.1.6-dev",
+      "version_code": 7,
+      "source_commit": "41ef96283d3564f9733f96de1e89d47dec5884f8",
+      "prerelease": false,
+      "filename": "duoge-parkour-0.1.6-dev-arm64-standalone.apk",
+      "size_bytes": 55115947,
+      "sha256": "047d88d122231a8538223dc107b1e0d978bfb80da389aae797fec4c995c506e4",
+      "origin_url": "https://raw.githubusercontent.com/pkokwho/duoge-download/26558cad363fce6e2ae7f98b3586ada1452ee057/downloads/duoge-parkour-0.1.6-dev-arm64-standalone.apk",
+      "notes": "修复校园模型变白，恢复原始配色；保留玩法和角色动作。此为已验收的独立正式下载版本。Android 10+ / ARM64。",
+      "target_commit": "26558cad363fce6e2ae7f98b3586ada1452ee057",
+      "source_archive": {
+        "filename": "duoge-code-0.1.6-dev.zip",
+        "path": "source/duoge-code-0.1.6-dev.zip",
+        "size_bytes": 80894,
+        "sha256": "1b0870ca8be0e6df1b2ec679353a05682cc790f778d14310d0c79df75b9f5e8b"
+      }
+    },
+    {
+      "tag": "v0.1.7-standalone",
+      "version_name": "0.1.7-dev",
+      "version_code": 8,
+      "source_commit": "affd36e22b8fed54c84525ffbf2b1881c40c1027",
+      "prerelease": true,
+      "filename": "duoge-parkour-0.1.7-dev-arm64-standalone.apk",
+      "size_bytes": 62080826,
+      "sha256": "cd9c982ca39e3ef1935d70adbcb9f084827bab9d60745668602006c1be1012f5",
+      "origin_url": "https://raw.githubusercontent.com/pkokwho/duoge-download/bf5246840adb91c568ee6a503d5c8d7a6bfbaf2c/downloads/duoge-parkour-0.1.7-dev-arm64-standalone.apk",
+      "notes": "双角色测试：可预览、切换并记住角色，移除常驻金色脚下光环。此包尚待手机体验反馈，不替代官网当前正式版本。Android 10+ / ARM64。",
+      "target_commit": "bf5246840adb91c568ee6a503d5c8d7a6bfbaf2c",
+      "source_archive": {
+        "filename": "duoge-code-0.1.7-dev.zip",
+        "path": "source/duoge-code-0.1.7-dev.zip",
+        "size_bytes": 88588,
+        "sha256": "7188c681de5534daa3a83c9ee625f010e72ffc1253f5eb2e53c468d8100b0192"
+      }
+    }
+  ]
+}

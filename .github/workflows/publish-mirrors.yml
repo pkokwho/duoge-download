@@ -1,0 +1,79 @@
+name: Publish verified APKs and check SourceForge mirror
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'distribution/releases.json'
+      - 'distribution/sourceforge.json'
+      - 'build_tools/distribution/**'
+      - '.github/workflows/publish-mirrors.yml'
+  schedule:
+    - cron: '37 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: verified-apk-distribution
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Check SourceForge configuration
+        id: configuration
+        run: |
+          echo "enabled=$(python3 -c 'import json; print(str(json.load(open("distribution/sourceforge.json"))["enabled"]).lower())')" >> "$GITHUB_OUTPUT"
+      - name: Test publication safeguards
+        run: python3 -m unittest discover -s tests -p 'test_distribution.py' -v
+      - name: Verify signed APKs and publish complete releases
+        if: github.event_name != 'schedule'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 build_tools/distribution/publish_mirrors.py \
+            --artifact-dir "$RUNNER_TEMP/duoge-apks" \
+            --output "$RUNNER_TEMP/duoge-mirror-result.json" \
+            --mirror-attempts 4
+      - name: Recheck pending automatic imports
+        if: github.event_name == 'schedule' && steps.configuration.outputs.enabled == 'true'
+        run: |
+          python3 build_tools/distribution/publish_mirrors.py \
+            --mirror-only --artifact-dir "$RUNNER_TEMP/duoge-apks" \
+            --output "$RUNNER_TEMP/duoge-mirror-result.json" --mirror-attempts 2
+      - name: Record actual publication and update project memory
+        if: github.event_name != 'schedule' || steps.configuration.outputs.enabled == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # The token stays in the runner environment, never in Git files/URLs.
+          askpass_path="$RUNNER_TEMP/duoge-git-askpass"
+          cat > "$askpass_path" <<'ASKPASS'
+          #!/bin/sh
+          case "$1" in
+            *Username*) printf '%s\n' x-access-token ;;
+            *Password*) printf '%s\n' "$GH_TOKEN" ;;
+          esac
+          ASKPASS
+          chmod 700 "$askpass_path"
+          export GIT_ASKPASS="$askpass_path" GIT_TERMINAL_PROMPT=0
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull --ff-only origin main
+          python3 build_tools/distribution/record_mirrors.py --result "$RUNNER_TEMP/duoge-mirror-result.json"
+          git add distribution/mirror-status.json mirror-links.json docs/agent/STATE.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Record verified release mirrors and update project memory"
+            git push origin HEAD:main
+          fi
+          rm -f "$askpass_path"

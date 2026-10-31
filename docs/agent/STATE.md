@@ -46,3 +46,13 @@
 - 手机链接目标 https://pkokwho.github.io/duoge-download/test-0.1.7.html ，备用为Raw main/downloads/下同名APK。只发布公开产物，不发布私钥/备份/authoring文件；每次推送/发布同步记忆。
 
 - .7测试页本地Chromium360×800和1280×900检查下载链接、实际包截图加载、无横向溢出/JS错误通过。手机.7体验尚未反馈，正式入口保持.6；下一步让用户试选角、跑跳滑铲与重启记忆，正常后再按授权提升正式入口并同步记忆。
+
+## 自动镜像草稿：账号路线暂停，不改生产
+
+- 用户已授权程序开源/自动分发，但随后表示注册授权太复杂、已疲惫。当前无需用户回答任何注册、邮箱、授权问题；不再催促注册新平台。SourceForge账号路线暂停，速度问题仍未解决。
+- 本分支feat/automatic-download-mirrors基于main=e167015，保存已测试发布器/模板：本公开库适合作公开Release目标；源码库匿名网页404，不当作公开附件下载源。
+- .6/.7的程序源码ZIP已按白名单生成（69/76文件，约80/89KB），带MIT/NOTICE/来源commit，不含美术/肖像、私有历史、内部agent记录或私钥；用户明确接受代码开源，因此可在本公开草稿分支保存，非安装包重新构建。
+- distribution/releases.json冻结现有APK/源代码包身份；内置GITHUB_TOKEN自动发布设计无需额外SSH密钥。SourceForge官方Github Integration仍须账号本人一次授权，当前未创建账号、未启用config、没有已验证SourceForge镜像链接。
+- 分发器7项单测、实际.6/.7 APK与代码ZIP预检通过；UI语法及正确文件/哈希/域名护栏通过。这里只是非默认分支草稿，main-only工作流不运行、Pages不部署；不是成功发布证据。
+- 现有main首页、release/routes、update-standalone.json/.4 update.json、所有旧APK均保持原样。SourceForge disabled，mirror-links为空，新网页挂点隐藏；主下载不切换，不宣称大陆速度改善。
+- 后续仅在用户主动恢复此路线后再处理必要授权/验证，或寻找真正可测试且无需新账号的路线；不得把用户之前的开放授权当作可以擅自替其完成邮箱/OAuth/人机验证。
