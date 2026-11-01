@@ -6,10 +6,12 @@
   "size_bytes": 73006964,
   "sha256": "e81364aa90d070a8ed1e9d0d4d0434cc54093c4dea0ce391c51c9f7eddf8d8bf",
   "browser_routes": [
+    "https://duoge-apk.app.workbuddy.host/duoge-parkour-0.1.8-dev-arm64-standalone.apk?sharecode=LECH35EKLF",
     "https://raw.githubusercontent.com/pkokwho/duoge-download/main/downloads/duoge-parkour-0.1.8-dev-arm64-standalone.apk",
     "https://github.com/pkokwho/duoge-download/raw/refs/heads/main/downloads/duoge-parkour-0.1.8-dev-arm64-standalone.apk",
     "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.8-dev-arm64-standalone.apk"
   ],
   "in_app_failover_enabled": false,
-  "phone_speed_validation": "pending"
+  "phone_speed_validation": "measured-4.4MBps-china-desktop",
+  "primary_route": "workbuddy-accelerator"
 }
