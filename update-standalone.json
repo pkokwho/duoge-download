@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 10,
-  "version_name": "0.1.8.1-dev",
+  "version_code": 11,
+  "version_name": "0.1.9-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "dbe42c39677dcf24a6aefe92bdd111347af3c511f5345f50401764d7c4739a13",
-  "size_bytes": 73006964,
-  "notes": "更新下载改走国内加速节点，速度从约 30 KB/s 提升到约 4 MB/s。\n下载失败会自动回退到备用线路。\n其余内容与 0.1.8 一致：界面重做、场景光照与阴影、成套图标与连击提示、背景音乐与克隆配音、撞击顿帧与震屏。"
+  "sha256": "4de632f8e1c0116c5f658a86a4a965ddda9293e5cb4f747106f82b4cbae75810",
+  "size_bytes": 57856499,
+  "notes": "性能专项：移动端关闭辉光、3D 渲染分辨率下调、阴影开销降低，低中端机也能跑顺。\n赛道物体改为复用，不再每隔一两秒重建再销毁，消除周期性卡顿。\n安装包从 69.6 MiB 瘦到 55.2 MiB。\n移除包内的配音参考音轨。\n签名证书不变，0.1.8 / 0.1.8.1 可直接覆盖更新。"
 }
