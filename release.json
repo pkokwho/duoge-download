@@ -1,12 +1,12 @@
 {
-  "version": "0.1.10-dev",
-  "version_code": 12,
+  "version": "0.1.11-dev",
+  "version_code": 13,
   "package": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
-  "size_bytes": 56956200,
-  "sha256": "6df1497b3d00eb79defd3890ea1741f45b258f1f91b52787e51a61af16709a9d",
+  "size_bytes": 56947755,
+  "sha256": "6273ad4098d15d05f1ebeec800ab38af7805435378e07c5639c8926cbccc75db",
   "signing_certificate_sha256": "d6105f4e4af255a42a617c2de6ad0d274a638993be8b978e965ca2a689c43e56",
-  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.10-dev-arm64-standalone.apk",
+  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.11-dev-arm64-standalone.apk",
   "update_manifest": "update-standalone.json",
   "install_mode": "side_by_side",
   "same_signing_certificate_as_0_1_1": false,
@@ -14,16 +14,17 @@
   "legacy_download_url": "downloads/duoge-parkour-0.1.4-dev-arm64.apk",
   "legacy_update_manifest": "update.json",
   "status": "development-release",
-  "android_device_validation": "pending-frame-rate-verification",
+  "android_device_validation": "pending-in-app-update-verification",
   "changes": [
-    "性能专项：角色模型从 15 万三角面降到 5 万面，每帧图元从 84 万降到 33.6 万（−60%），画面配置与 0.1.9 完全一致。",
-    "修复游戏内更新：此前误读已停更的旧清单，一直提示「已是最新版本」，实际从未工作。",
-    "安装包 54.3 MiB（0.1.9 为 55.2 MiB）。",
-    "签名证书不变，0.1.8 / 0.1.8.1 / 0.1.9 可直接覆盖安装。"
+    "修复游戏内更新装不上：下载完成后不弹系统安装界面、点「重试安装」无反应。原因是自定义模板打包时三个 provider 的 authority 被改写成同一个值，安装组件的 FileProvider 解析失败。",
+    "出包流程改为保留底座 APK 的 manifest 与资源表，只替换游戏资源；并加入强制校验：三个 authority 必须互不相同，否则拒绝签名。",
+    "安装连续失败两次后，更新面板改为提供「从官网下载」出口。",
+    "排除误打进包内的本地分发目录（publish-download / distribution）。",
+    "其余内容与 0.1.10 一致（5 万面角色、图元 84 万→33.6 万、包体 54.3 MiB）。"
   ],
   "published_date": "2026-11-01",
   "android_device_validation_date": "",
-  "upgrades_standalone_version": "0.1.9-dev",
+  "upgrades_standalone_version": "0.1.10-dev",
   "accelerator_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
   "source_commit": "19cf00dbab3a0714830c11fd8f12637edaf31eb9"
 }
