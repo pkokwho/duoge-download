@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 5,
-  "version_name": "0.1.4-dev",
+  "version_code": 12,
+  "version_name": "0.1.10-dev",
   "package_name": "org.duoge.parkour",
-  "min_android_sdk": 24,
-  "apk_url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.4-dev-arm64.apk",
-  "sha256": "9c7375b4ee5eaac4507eeb2612be31785481a1dcc9c4af40d05ce5bbceae0c2a",
-  "size_bytes": 51248394,
-  "notes": "校园新场景与75秒单局挑战，采用用户已验收的P2玩法\n每段至多一条金币路线，219枚金币与递进跳跃、滑铲、换道组合\n两次磁铁每次4秒，120金币目标，关卡纪录与旧无尽纪录分开保留\n保留A构图、原主角动作、触控响应及设置内检查/下载更新"
+  "min_android_sdk": 29,
+  "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
+  "sha256": "6df1497b3d00eb79defd3890ea1741f45b258f1f91b52787e51a61af16709a9d",
+  "size_bytes": 56956200,
+  "notes": "本次为 0.1.10：性能专项（角色模型从 15 万面降到 5 万面，每帧图元降 60%）、修复游戏内更新此前一直提示「已是最新」、安装包 54.3 MiB。\n签名证书与 0.1.8 相同，0.1.8 / 0.1.8.1 / 0.1.9 均可直接覆盖安装。\n若你装的是 0.1.6 / 0.1.7（旧包名、旧证书），本包无法覆盖，请先卸载再从官网重新下载。"
 }
