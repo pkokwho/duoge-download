@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 14,
-  "version_name": "0.1.11.1-dev",
+  "version_code": 13,
+  "version_name": "0.1.11-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
-  "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-0.1.11.1.apk?sharecode=LECH35EKLF",
-  "sha256": "2cafd7c0fde970228e728664bdf6f3f445ba52c7445db7e4b425b33c58079a27",
+  "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
+  "sha256": "6273ad4098d15d05f1ebeec800ab38af7805435378e07c5639c8926cbccc75db",
   "size_bytes": 56947755,
-  "notes": "本版是更新链路的验证版，游戏内容与 0.1.11 完全相同，只把版本号加一，用来触发一次真实的更新流程。\n看到安卓系统安装界面弹出，就说明 0.1.11 修复的「装不上」问题确实解决了；装不装都可以，不影响游戏数据。\n如果你还没装 0.1.11，请先手动安装它，再回来试本版。"
+  "notes": "本次修复游戏内更新装不上的问题：此前能检查到新版本、也能下载完成，但不会弹出系统安装界面，点「重试安装」也没有反应。原因是打包时安装组件的声明被误改，系统找不到接收入口。\n另外加了一条兜底：安装连续失败两次后，面板会直接给出「从官网下载」，不再让人反复点必然失败的重试。\n其余内容与 0.1.10 一致。签名证书不变，可直接覆盖安装。\n注意：0.1.9 及更早版本的安装器本身是坏的，需要手动安装本版一次，之后才能用游戏内更新。"
 }
