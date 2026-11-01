@@ -1,12 +1,12 @@
 {
-  "version": "0.1.8-dev",
-  "version_code": 9,
+  "version": "0.1.8.1-dev",
+  "version_code": 10,
   "package": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "size_bytes": 73006964,
-  "sha256": "e81364aa90d070a8ed1e9d0d4d0434cc54093c4dea0ce391c51c9f7eddf8d8bf",
+  "sha256": "dbe42c39677dcf24a6aefe92bdd111347af3c511f5345f50401764d7c4739a13",
   "signing_certificate_sha256": "d6105f4e4af255a42a617c2de6ad0d274a638993be8b978e965ca2a689c43e56",
-  "url": "downloads/duoge-parkour-0.1.8-dev-arm64-standalone.apk",
+  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.8.1-dev-arm64-standalone.apk",
   "update_manifest": "update-standalone.json",
   "install_mode": "side_by_side",
   "same_signing_certificate_as_0_1_1": false,
@@ -16,14 +16,13 @@
   "status": "development-release",
   "android_device_validation": "pending-install-with-new-signing-certificate",
   "changes": [
-    "界面全面重做：主页、局内HUD、结算、设置、角色选择统一为白卡风格。",
-    "场景开启光照与阴影、电影级色调映射与雾效，画面更有层次。",
-    "新增12枚成套图标、连击提示、全屏沉浸式选角舞台。",
-    "新增背景音乐、克隆配音与连吃金币台词，语音单通道不叠加。",
-    "撞击加入顿帧、镜头冲撞、震屏与触觉反馈。",
-    "签名证书更换：已安装 0.1.6/0.1.7 需先卸载再安装，本地纪录不保留。"
+    "更新下载改走国内加速节点，速度约提升 100 倍（30 KB/s → 约 4 MB/s）。",
+    "下载失败自动回退到备用线路。",
+    "其余内容与 0.1.8 一致。",
+    "签名证书同一把（与 0.1.8 相同），0.1.8 可直接覆盖更新；0.1.6/0.1.7 仍需先卸载。"
   ],
   "published_date": "2026-11-01",
   "android_device_validation_date": "",
-  "upgrades_standalone_version": "0.1.7-dev"
+  "upgrades_standalone_version": "0.1.8-dev",
+  "accelerator_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF"
 }
