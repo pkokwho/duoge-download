@@ -1,12 +1,12 @@
 {
-  "version": "0.1.10-dev",
-  "version_code": 12,
+  "version": "0.1.9-dev",
+  "version_code": 11,
   "package": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "size_bytes": 57856499,
-  "sha256": "d771dc68fb09d6bba554d36ca7158916a469d944dafa816aa0106fcc0cd1e321",
+  "sha256": "4de632f8e1c0116c5f658a86a4a965ddda9293e5cb4f747106f82b4cbae75810",
   "signing_certificate_sha256": "d6105f4e4af255a42a617c2de6ad0d274a638993be8b978e965ca2a689c43e56",
-  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.10-dev-arm64-standalone.apk",
+  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.9-dev-arm64-standalone.apk",
   "update_manifest": "update-standalone.json",
   "install_mode": "side_by_side",
   "same_signing_certificate_as_0_1_1": false,
@@ -14,16 +14,17 @@
   "legacy_download_url": "downloads/duoge-parkour-0.1.4-dev-arm64.apk",
   "legacy_update_manifest": "update.json",
   "status": "development-release",
-  "android_device_validation": "pending-in-app-update-verification",
+  "android_device_validation": "pending-frame-rate-check",
   "changes": [
-    "修复游戏内更新：此前误读已停更的旧版清单（版本号只有 5），一直提示「已是最新版本」，实际从未工作过。",
-    "更新清单改走国内加速节点，取不到时自动回退 GitHub 备用线路。",
-    "其余内容与 0.1.9 一致：性能专项、包体 55.2 MiB。",
-    "签名证书不变（与 0.1.8 同一把），0.1.8 / 0.1.8.1 / 0.1.9 可直接覆盖更新；0.1.6 / 0.1.7 仍需先卸载。"
+    "性能专项：移动端关闭辉光、3D 渲染分辨率 1.0 降到 0.8、阴影开销降低，解决「全程不流畅」。",
+    "赛道障碍物与金币改为对象池复用，消除每隔一两秒重建造成的周期性卡顿。",
+    "安装包从 69.6 MiB 瘦到 55.2 MiB（剔除废弃贴图、无引用素材、缩小启动图标）。",
+    "移除包内配音参考音轨。",
+    "签名证书不变（与 0.1.8 同一把），0.1.8 / 0.1.8.1 可直接覆盖更新；0.1.6 / 0.1.7 仍需先卸载。"
   ],
   "published_date": "2026-11-01",
   "android_device_validation_date": "",
-  "upgrades_standalone_version": "0.1.9-dev",
+  "upgrades_standalone_version": "0.1.8.1-dev",
   "accelerator_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
   "source_commit": "19cf00dbab3a0714830c11fd8f12637edaf31eb9"
 }
