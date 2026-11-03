@@ -3,6 +3,13 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
+## 当前发布：0.1.13-dev / 16（2026-11-03）
+
+- 本次更新源码发布记录见 `pkokwho/duoduo-parkour` `docs/releases/0.1.13.md`；发布提交 `7688ed3`。
+- APK：`downloads/duoge-parkour-0.1.13-dev-arm64-standalone.apk` 与 `downloads/duoge-parkour-latest.apk`，61,230,439 B（58.4 MiB）。
+- SHA-256：`947461d55898b6d9c38f1b6270d673d0c89f1aab8fffd1ca1de8104a79ff8516`；证书 `d6105f4e…` 不变。
+- 首页、备用页、`update.json`、`update-standalone.json` 已升至 0.1.13-dev / code 16；旧 APK 与历史页面保留。本段之前的内容为历史记录，不代表当前版本。
+
 ## 当前发布：0.1.6-dev 正式入口提升
 
 - 版本 0.1.6-dev / 7，包名 `org.duoge.parkour.standalone`，名称“舵哥快跑（新版）”；ARM64 / Android 10+，API 29/36。

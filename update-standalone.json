@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 15,
-  "version_name": "0.1.12-dev",
+  "version_code": 16,
+  "version_name": "0.1.13-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "555b0026000d92f8d5b8a8c3da3b3fe3339169c44bd9284a72bf3fa3e47d6b28",
+  "sha256": "947461d55898b6d9c38f1b6270d673d0c89f1aab8fffd1ca1de8104a79ff8516",
   "size_bytes": 61230439,
-  "notes": "玩法改版：75 秒样段下线，主打无限模式，速度随距离持续提升，跑得越远越快。\n金币能攒了：解锁迪舵（999 金币）、死亡后复活（50/150/300），金币不再只是分数。\n角色技能：舵哥每局首次撞击免死；迪舵可飞天 4 秒自动吸金币，落地有保护。\n选角界面信息条与按钮随角色换装；首页改为游戏实景，点开始有推镜开场动画。\n校园地图原样保留（教学楼/商店区/车站区轮转），障碍物换成校园风格。\n签名不变，可直接覆盖安装；存档、已选角色、金币都保留。"
+  "notes": "相机修复：从选角面板开始游戏后，角色固定在画面下方，不再停在画面中央。\n性能优化：阴影距离与深度格式调整、校园景物合批，draw calls 173→116；画面保持原样。\n新增相机取景与性能基准测试，防止后续回归。\n签名不变，可直接覆盖安装；存档、角色、金币都保留。"
 }
