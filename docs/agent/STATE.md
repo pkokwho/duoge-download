@@ -11,7 +11,7 @@
 - 阶段 2 提交提升 `index.html`、`download-lines.html`、`update-standalone.json`、`download-routes.json`、`release.json` 到 code 20；旧包名 `update.json` 仍为 0.1.13-dev / code 16，未混入独立新版。
 - 加速节点（WorkBuddy 托管 `publish-download/`）已部署，主清单 code 20、页面 0.1.17-dev、完整下载线上 APK 与签名包逐字节一致。两条更新线路一致后，code 17/18/19 客户端可判定可更新，code 20 判 current。
 - 注意：会话恢复曾把本地工作区回滚到发布前，线上部署与 Git push 仍持久；已按线上核验过的 APK 重建本地副本后再提交。接手须重新 `git status` / 线上核验，不要只信本地快照。
-- Pages 部署可能有构建延迟，推送成功不等于 Pages 已生效；以远端文件与 HTTP 实测为准。以下各节为历史记录，不代表当前版本。
+- Pages 推送后曾为 building（CDN 仍返回 0.1.13-dev）；随后 `gh api .../pages/builds/latest` 显示 `6a23f10` **built**，线上 Pages 备用清单与首页实测 code 20 / 0.1.17-dev / 新 SHA，用该清单复跑旧版更新判定 22 项全通过。以下各节为历史记录，不代表当前版本。
 
 ## 历史发布：0.1.13-dev / 16（2026-11-03）
 
