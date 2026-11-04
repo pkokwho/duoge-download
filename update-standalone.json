@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 16,
-  "version_name": "0.1.13-dev",
+  "version_code": 20,
+  "version_name": "0.1.17-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "947461d55898b6d9c38f1b6270d673d0c89f1aab8fffd1ca1de8104a79ff8516",
-  "size_bytes": 61230439,
-  "notes": "相机修复：从选角面板开始游戏后，角色固定在画面下方，不再停在画面中央。\n性能优化：阴影距离与深度格式调整、校园景物合批，draw calls 173→116；画面保持原样。\n新增相机取景与性能基准测试，防止后续回归。\n签名不变，可直接覆盖安装；存档、角色、金币都保留。"
+  "sha256": "4b829ab844cefc81bd855d8507c96b4d87529bb8c05ab5c9afc200ec9d5937f9",
+  "size_bytes": 61350021,
+  "notes": "• 舵哥奔跑动作重做：摆臂更舒展、前后节奏更自然，跑起来不再僵硬。\n• 移除会遮挡画面的技能演出卡；迪舵飞天技能、按钮和使用次数保持不变。\n• 「关于与签名」补充奔跑动画来源与 CC BY 4.0 开源许可说明。\n• 存档与备份、迪舵飞天、校园赛道等内容沿用上一版。\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
 }

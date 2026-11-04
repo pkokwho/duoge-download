@@ -3,7 +3,17 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.1.13-dev / 16（2026-11-03）
+## 当前发布：0.1.17-dev / 20（2026-11-05，最新）
+
+- 用户 2026-11-04 23:33 明确授权发布新版、更新下载官网、让旧版本自动检查更新可用；并确认「加速节点 + GitHub 官网」「FALLBACK_APK_URL 一并改到新版」「源码本地 commit + push 下载仓库」。
+- 源码发布记录见 `pkokwho/duoduo-parkour` `docs/releases/0.1.17.md`。APK `downloads/duoge-parkour-0.1.17-dev-arm64-standalone.apk` 与 `downloads/duoge-parkour-latest.apk`：61,350,021 B（58.5 MiB），SHA-256 `4b829ab844cefc81bd855d8507c96b4d87529bb8c05ab5c9afc200ec9d5937f9`；证书 `d6105f4e…` 未变。
+- 阶段 1 提交 `a118e77` 已 push main，仅含签名 APK / SHA / latest；Raw 完整下载大小与 SHA 已核验，先于页面提升。
+- 阶段 2 提交提升 `index.html`、`download-lines.html`、`update-standalone.json`、`download-routes.json`、`release.json` 到 code 20；旧包名 `update.json` 仍为 0.1.13-dev / code 16，未混入独立新版。
+- 加速节点（WorkBuddy 托管 `publish-download/`）已部署，主清单 code 20、页面 0.1.17-dev、完整下载线上 APK 与签名包逐字节一致。两条更新线路一致后，code 17/18/19 客户端可判定可更新，code 20 判 current。
+- 注意：会话恢复曾把本地工作区回滚到发布前，线上部署与 Git push 仍持久；已按线上核验过的 APK 重建本地副本后再提交。接手须重新 `git status` / 线上核验，不要只信本地快照。
+- Pages 部署可能有构建延迟，推送成功不等于 Pages 已生效；以远端文件与 HTTP 实测为准。以下各节为历史记录，不代表当前版本。
+
+## 历史发布：0.1.13-dev / 16（2026-11-03）
 
 - 本次更新源码发布记录见 `pkokwho/duoduo-parkour` `docs/releases/0.1.13.md`；发布提交 `7688ed3`。
 - APK：`downloads/duoge-parkour-0.1.13-dev-arm64-standalone.apk` 与 `downloads/duoge-parkour-latest.apk`，61,230,439 B（58.4 MiB）。
