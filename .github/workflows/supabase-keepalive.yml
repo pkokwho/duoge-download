@@ -1,0 +1,83 @@
+name: Supabase keepalive
+
+# 目的：Supabase 免费项目连续 7 天没有任何请求会被暂停（暂停后必须人工去后台恢复）。
+# 这里每天打一次排行榜接口，把“最后一次活动时间”顶到今天。
+#
+# 另一个坑：GitHub 会在仓库连续 60 天没有任何提交后，自动停用定时工作流。
+# 所以每月 1 号往 keepalive 分支推一个空提交——推分支不算改 main，不会触发 Pages 重建。
+#
+# 两个定时：
+#   0 1 * * *  每天 UTC 01:00（北京 09:00）探活
+#   0 0 1 * *  每月 1 号 UTC 00:00 心跳续期
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      heartbeat:
+        description: '顺带执行一次心跳提交（用于验证）'
+        type: boolean
+        default: false
+
+# 只有心跳任务需要写权限；探活任务不发任何写操作
+permissions:
+  contents: write
+
+concurrency:
+  group: supabase-keepalive
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    name: Ping leaderboard API
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.schedule == '0 1 * * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Request the public leaderboard view
+        env:
+          # 公开 key：设计上就随 APK 分发，不是机密。service_role 绝不写进这里。
+          LB_URL: https://iqhbawtwwvgwotxvqjwz.supabase.co
+          LB_KEY: sb_publishable_7Ji28d-M0P70vKNLYS14WA_o4WDrGaQ
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -o /tmp/out.json -w '%{http_code}' --max-time 20 \
+            "$LB_URL/rest/v1/lb_top?select=rank&limit=1" \
+            -H "apikey: $LB_KEY")
+          echo "HTTP $code"
+          echo "body: $(cat /tmp/out.json)"
+          if [ "$code" != "200" ]; then
+            echo "::error::探活失败（HTTP $code）。项目可能已被暂停，需要登录 Supabase 后台手动恢复。"
+            exit 1
+          fi
+          echo "OK 项目活跃，例行探活完成"
+
+  heartbeat:
+    name: Monthly heartbeat (keep schedules enabled)
+    if: >-
+      (github.event_name == 'schedule' && github.event.schedule == '0 0 1 * *') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.heartbeat == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push a single empty commit to keepalive branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 每次都用孤立分支重建，历史永远只有 1 个提交，不会越滚越大
+          git checkout --orphan keepalive-rebuild
+          git rm -rf . >/dev/null 2>&1 || true
+          git commit --allow-empty -m "chore(keepalive): $(date -u +%Y-%m)"
+          git branch -M keepalive
+          # 只推这个分支，main 与 Pages 都不受影响
+          git push --force origin keepalive
+          echo "心跳完成：keepalive 分支已更新"
