@@ -1,12 +1,12 @@
 {
-  "version": "0.1.17-dev",
-  "version_code": 20,
+  "version": "0.1.18-dev",
+  "version_code": 21,
   "package": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
-  "size_bytes": 61350021,
-  "sha256": "4b829ab844cefc81bd855d8507c96b4d87529bb8c05ab5c9afc200ec9d5937f9",
+  "size_bytes": 61370829,
+  "sha256": "69fa00d92ad1284a870993ad88b8244493087460ef24e9c73cbc4535b260d92d",
   "signing_certificate_sha256": "d6105f4e4af255a42a617c2de6ad0d274a638993be8b978e965ca2a689c43e56",
-  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.17-dev-arm64-standalone.apk",
+  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.18-dev-arm64-standalone.apk",
   "update_manifest": "update-standalone.json",
   "install_mode": "side_by_side",
   "same_signing_certificate_as_0_1_1": false,
@@ -16,15 +16,15 @@
   "status": "development-release",
   "android_device_validation": "pending-in-app-update-verification",
   "changes": [
-    "舵哥奔跑动作重做：换用 Mannequiny 开源奔跑动作并重定向到现有骨架，手臂适度外展、摆臂更舒展；用户已在电脑上试玩确认。",
-    "移除会遮挡画面的迪舵技能演出卡；飞天技能、按钮与使用次数保持不变。",
-    "「关于与签名」补充奔跑动画来源与 CC BY 4.0 许可说明，NOTICE.md 同步记录。",
-    "签名证书不变，可直接覆盖安装；存档、角色与金币保留。",
-    "存档与备份、迪舵飞天、校园赛道等内容沿用 0.1.16-dev。"
+    "新增云排行榜：跑完一局自动上传，结算页显示全服名次与「再快多少分超过谁」。",
+    "首页新增排行榜面板，可查看全服前 50 名与自己的排名。",
+    "设置页新增「玩家昵称」，可起名与改名，名字同步到榜单。",
+    "上传失败不阻塞游戏：成绩存本地队列，下次启动自动补传。",
+    "签名证书不变，可直接覆盖安装；存档、角色与金币保留。"
   ],
-  "published_date": "2026-11-04",
+  "published_date": "2026-11-06",
   "android_device_validation_date": "",
-  "upgrades_standalone_version": "0.1.16-dev",
+  "upgrades_standalone_version": "0.1.17-dev",
   "accelerator_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
   "source_commit": "19cf00dbab3a0714830c11fd8f12637edaf31eb9"
 }

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 20,
-  "version_name": "0.1.17-dev",
+  "version_code": 21,
+  "version_name": "0.1.18-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "4b829ab844cefc81bd855d8507c96b4d87529bb8c05ab5c9afc200ec9d5937f9",
-  "size_bytes": 61350021,
-  "notes": "• 舵哥奔跑动作重做：摆臂更舒展、前后节奏更自然，跑起来不再僵硬。\n• 移除会遮挡画面的技能演出卡；迪舵飞天技能、按钮和使用次数保持不变。\n• 「关于与签名」补充奔跑动画来源与 CC BY 4.0 开源许可说明。\n• 存档与备份、迪舵飞天、校园赛道等内容沿用上一版。\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
+  "sha256": "69fa00d92ad1284a870993ad88b8244493087460ef24e9c73cbc4535b260d92d",
+  "size_bytes": 61370829,
+  "notes": "• 新增云排行榜：跑完一局自动上榜，结算页直接显示全服名次与差距。\\n• 首页新增排行榜入口，可看全服前 50 名和自己的排名。\\n• 设置页可起名、改名，名字会显示在榜单上。\\n• 网络不稳时成绩存本地，下次启动自动补传，不影响游戏。\\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
 }
