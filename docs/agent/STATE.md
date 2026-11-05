@@ -72,3 +72,15 @@
 - 新分发工具、MIT范围声明、代码ZIP和隐藏镜像入口只在非默认分支feat/automatic-download-mirrors@e7f494b保存，未合并main/未部署/未提供SourceForge链接；账号配置disabled，没有创建SourceForge账号或项目。
 - 源码master交接022fe8c已撤下活动镜像workflow，保留template；这些镜像尝试未改动游戏脚本/模型/场景/现有APK。原签名和已完成双角色功能保留。
 - 本提交只给main补上此前仅草稿分支记录的中止状态与版本事实，安装包/页面/清单不改。以前main=e167015；当前交接提交用git log -1读取。后续接手先梳理现状，不要求用户重复上述流程；速度未解决必须直说。
+
+## Supabase 探活工作流（2026-11-06，提交 `72bda5a`）
+
+- 文件 `.github/workflows/supabase-keepalive.yml`。目的：Supabase 免费项目连续 7 天无请求会被暂停。
+- 每天 UTC 01:00（北京 09:00）请求 `https://iqhbawtwwvgwotxvqjwz.supabase.co/rest/v1/lb_top?select=rank&limit=1`，
+  用公开 key（本就随 APK 分发，非机密）。失败会显式 fail 并提示需到后台恢复。
+- 每月 1 号向 `keepalive` 分支强制推一个孤立空提交，规避 GitHub「仓库 60 天无提交停用定时任务」；
+  只推非默认分支，**不触发 Pages 重建**，main 不受影响。
+- 实测（run `42062594916`，手动触发带 `heartbeat=true`）：探活 `HTTP 200`、body `[]`；心跳生成
+  `refs/heads/keepalive` = `c8bd1c6`，main 仍为 `72bda5a`。
+- 若 60 天后仍被停用，用 `gh workflow enable supabase-keepalive.yml` 重新启用；**它只能防暂停，不能救暂停**，
+  真被暂停必须登录 Supabase 后台手动恢复。
