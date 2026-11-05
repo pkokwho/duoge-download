@@ -84,3 +84,14 @@
   `refs/heads/keepalive` = `c8bd1c6`，main 仍为 `72bda5a`。
 - 若 60 天后仍被停用，用 `gh workflow enable supabase-keepalive.yml` 重新启用；**它只能防暂停，不能救暂停**，
   真被暂停必须登录 Supabase 后台手动恢复。
+
+## 站点瘦身（2026-11-06，提交 `a2f4d40`）
+
+- 起因：站点内容 1.16 GB，超 GitHub Pages 1 GB 限制，继续加版本可能构建失败。
+- 保留 4 个文件（约 166 MB）：`duoge-parkour-latest.apk`、`duoge-parkour-0.1.17-dev-arm64-standalone.apk`（+ `.sha256`）、
+  `duoge-parkour-0.1.4-dev-arm64.apk`（首页「旧版继续保留」入口）。
+- 删除 26 个无任何页面/清单引用的旧包（0.1 ~ 0.1.13）与两个孤儿测试页 `test-0.1.6.html` / `test-0.1.7.html`。
+- 结果：**站点 301.8 MB**（85 个跟踪文件），Pages 构建 `built` 无错误；线上核验 index 200、
+  latest 61,350,021 B、命名包 61,350,021 B、0.1.4 51,248,394 B、已删文件 404。
+- 找回方式：`git show <commit>:downloads/<文件名> > 输出`（历史仍在，仓库 clone 体积不变）。
+- 遗留：`download-routes-0.1.5.json`、`release-0.1.5.json` 等历史元数据仍提到已删文件，不被页面或客户端消费。
