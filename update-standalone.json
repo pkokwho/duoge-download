@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 22,
-  "version_name": "0.1.19-dev",
+  "version_code": 23,
+  "version_name": "0.1.20-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "41315de1762ead5b191fe72d390a14a32fe89189b2e8a7a9057fd55658ad5c0a",
-  "size_bytes": 61370829,
-  "notes": "• 修复部分手机排行榜传不上去：网络慢时多等一会儿，失败后自动重试两次。\n• 排行榜上传改为后台进行，结算页不再停在「正在上传」。\n• 上传失败时显示具体原因（超时 / 解析失败 / 连接被拒），便于反馈。\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
+  "sha256": "be38ff57e3c4cbb61ed12a6101b6cf52639d7ba96eeffd4e6fb7194e1b8134f7",
+  "size_bytes": 61374925,
+  "notes": "• 修复结算页一直停在「正在上传」：上一局还在同步时，这局不再把界面卡住。\n• 上传撞车时成绩自动留到下次启动补传，不会丢。\n• 重试等待改为递减，最坏耗时从 65 秒缩短到约 40 秒。\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
 }

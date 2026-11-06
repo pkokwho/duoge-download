@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "version_code": 22,
-  "version_name": "0.1.19-dev",
+  "version_code": 23,
+  "version_name": "0.1.20-dev",
   "package_name": "org.duoge.parkour.standalone",
-  "size_bytes": 61370829,
-  "sha256": "41315de1762ead5b191fe72d390a14a32fe89189b2e8a7a9057fd55658ad5c0a",
+  "size_bytes": 61374925,
+  "sha256": "be38ff57e3c4cbb61ed12a6101b6cf52639d7ba96eeffd4e6fb7194e1b8134f7",
   "browser_routes": [
     "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-    "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.19-dev-arm64-standalone.apk",
-    "https://raw.githubusercontent.com/pkokwho/duoge-download/main/downloads/duoge-parkour-0.1.19-dev-arm64-standalone.apk"
+    "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.20-dev-arm64-standalone.apk",
+    "https://raw.githubusercontent.com/pkokwho/duoge-download/main/downloads/duoge-parkour-0.1.20-dev-arm64-standalone.apk"
   ],
   "in_app_failover_enabled": false,
   "phone_speed_validation": "measured-4.4MBps-china-desktop",
