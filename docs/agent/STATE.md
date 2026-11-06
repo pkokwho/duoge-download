@@ -3,7 +3,21 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.1.18-dev / 21（2026-11-06，最新）
+## 当前发布：0.1.19-dev / 22（2026-11-06，最新）
+
+- 内容：修复部分手机排行榜传不上去（弱网下超时 8→20 秒、失败退避重试 2 次、上传改后台、
+  失败时显示具体原因）。源码记录见 `docs/releases/0.1.19.md`。
+- APK `downloads/duoge-parkour-0.1.19-dev-arm64-standalone.apk` 与 `downloads/duoge-parkour-latest.apk`：
+  61,370,829 B，SHA-256 `41315de1762ead5b191fe72d390a14a32fe89189b2e8a7a9057fd55658ad5c0a`；
+  证书 `d6105f4e…` 未变，versionCode=22，可直接覆盖安装。
+- 提交 `42d9bc2` 已 push main：新增命名包与 `.sha256`、替换 latest、提升 `update-standalone.json` 到 code 22、
+  更新 `index.html` / `download-lines.html` / `release.json` / `download-routes.json`。旧包名 `update.json` 仍 code 16。
+- 按上次约定删除 0.1.17 命名包；站点体积 **360.4 MB**（低于 Pages 1 GB）。**下次发版应删 0.1.18。**
+- 核验：Pages **built**；加速节点完整下载线上 APK **逐字节一致**；
+  两条清单用发布版 `validate_manifest` 跑 **26 项断言全通过**（code 19/20/21 可更新、22 为 current）。
+- 手机真机安装与游戏内更新流程仍未验证。
+
+## 历史：0.1.18-dev / 21（2026-11-06）
 
 - 用户 2026-11-06 明确要求「再发布新版、更新下载官网、旧版本自动检查更新」。源码记录见
   `pkokwho/duoduo-parkour` `docs/releases/0.1.18.md`。
