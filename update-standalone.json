@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 21,
-  "version_name": "0.1.18-dev",
+  "version_code": 22,
+  "version_name": "0.1.19-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "69fa00d92ad1284a870993ad88b8244493087460ef24e9c73cbc4535b260d92d",
+  "sha256": "41315de1762ead5b191fe72d390a14a32fe89189b2e8a7a9057fd55658ad5c0a",
   "size_bytes": 61370829,
-  "notes": "• 新增云排行榜：跑完一局自动上榜，结算页直接显示全服名次与差距。\\n• 首页新增排行榜入口，可看全服前 50 名和自己的排名。\\n• 设置页可起名、改名，名字会显示在榜单上。\\n• 网络不稳时成绩存本地，下次启动自动补传，不影响游戏。\\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
+  "notes": "• 修复部分手机排行榜传不上去：网络慢时多等一会儿，失败后自动重试两次。\n• 排行榜上传改为后台进行，结算页不再停在「正在上传」。\n• 上传失败时显示具体原因（超时 / 解析失败 / 连接被拒），便于反馈。\n• 签名证书不变，可直接覆盖安装；存档、角色、金币均保留。"
 }

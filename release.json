@@ -1,12 +1,12 @@
 {
-  "version": "0.1.18-dev",
-  "version_code": 21,
+  "version": "0.1.19-dev",
+  "version_code": 22,
   "package": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "size_bytes": 61370829,
-  "sha256": "69fa00d92ad1284a870993ad88b8244493087460ef24e9c73cbc4535b260d92d",
+  "sha256": "41315de1762ead5b191fe72d390a14a32fe89189b2e8a7a9057fd55658ad5c0a",
   "signing_certificate_sha256": "d6105f4e4af255a42a617c2de6ad0d274a638993be8b978e965ca2a689c43e56",
-  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.18-dev-arm64-standalone.apk",
+  "url": "https://pkokwho.github.io/duoge-download/downloads/duoge-parkour-0.1.19-dev-arm64-standalone.apk",
   "update_manifest": "update-standalone.json",
   "install_mode": "side_by_side",
   "same_signing_certificate_as_0_1_1": false,
@@ -16,15 +16,15 @@
   "status": "development-release",
   "android_device_validation": "pending-in-app-update-verification",
   "changes": [
-    "新增云排行榜：跑完一局自动上传，结算页显示全服名次与「再快多少分超过谁」。",
-    "首页新增排行榜面板，可查看全服前 50 名与自己的排名。",
-    "设置页新增「玩家昵称」，可起名与改名，名字同步到榜单。",
-    "上传失败不阻塞游戏：成绩存本地队列，下次启动自动补传。",
+    "修复部分手机排行榜传不上去：弱网下超时从 8 秒放宽到 20 秒。",
+    "失败后自动退避重试两次，丢包场景不再一次放弃。",
+    "排行榜上传改为后台进行，结算页不再停留在「正在上传」。",
+    "上传失败时结算页显示具体原因（超时 / 解析失败 / 连接被拒）。",
     "签名证书不变，可直接覆盖安装；存档、角色与金币保留。"
   ],
   "published_date": "2026-11-06",
   "android_device_validation_date": "",
-  "upgrades_standalone_version": "0.1.17-dev",
+  "upgrades_standalone_version": "0.1.18-dev",
   "accelerator_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
   "source_commit": "19cf00dbab3a0714830c11fd8f12637edaf31eb9"
 }
