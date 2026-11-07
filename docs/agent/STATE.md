@@ -3,7 +3,21 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.1.21-dev / 24（2026-11-06，最新）
+## 当前发布：0.1.22-dev / 25（2026-11-07，最新）
+
+- 内容：顶部白边修复（画面铺满状态栏/刘海区）、设置页三项整行按钮、角色页技能介绍、
+  迪舵技能改「落地后 25 秒冷却」并换专属图标与扇形读秒。源码记录见 `docs/releases/0.1.22.md`。
+- 部署位仍是 **Python 合并服务**（`publish-download/server.py`，源码副本在源码仓库 `build_tools/site_server.py`）：
+  静态文件（含 Range）+ `/lb` 转发 + `/health`。**改站内容必须连 server.py 一起部署**。
+- APK 61,498,038 B，SHA-256 `15a9ad79238b464839078bb9df157b0a22d22d02d6f3e08355a2e37f677712fb`，
+  证书 `d6105f4e…` 未变，versionCode=25，可直接覆盖安装。
+- 提交 `d891703` 已 push main；旧包名 `update.json` 仍 code 16。删除 0.1.20，保留 0.1.21 一个周期；
+  **下次发版应删 0.1.21**。站点 360.6 MB（低于 Pages 1 GB）。
+- 核验：Pages built（`d891703`）；加速节点完整下载 **逐字节一致**；GitHub Raw 包 **逐字节一致**；
+  两条清单 `validate_manifest` **26 项全过**（code 22/23/24 可更新、25 为 current）。
+- **白边是否真消失仍需真机确认**；包内 `assets/_cl_` 已含 `--fullscreen` / `--edge_to_edge`。
+
+## 历史：0.1.21-dev / 24（2026-11-06）
 
 - 内容：排行榜主线路改走 WorkBuddy 中转（`/lb`），修复部分运营商 DNS 解析不到
   `*.supabase.co` 导致首页刷不出榜。源码记录见 `docs/releases/0.1.21.md`。
