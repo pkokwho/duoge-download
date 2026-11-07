@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 24,
-  "version_name": "0.1.21-dev",
+  "version_code": 25,
+  "version_name": "0.1.22-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "a92bc0cb4ce6f6505b994076945bcdc7e70613c5217f57a36a5d88b5042b06fa",
-  "size_bytes": 61374925,
-  "notes": "• 排行榜改走国内可达的中转线路，修复「连不上云端」刷不出榜。\n• 首页榜单先出列表再补自己的名次，打开更快。\n• 中转不通时自动回退直连。\n• 签名证书不变，可直接覆盖安装。"
+  "sha256": "15a9ad79238b464839078bb9df157b0a22d22d02d6f3e08355a2e37f677712fb",
+  "size_bytes": 61498038,
+  "notes": "• 修复手机上方的白边：画面现在铺满到屏幕顶端。\n• 设置页的存档、昵称、关于改成一眼能点的按钮行。\n• 角色界面新增技能介绍：舵哥被动「来了一次」、迪舵主动「原地升天」。\n• 迪舵技能改为落地后 25 秒冷却，并换成专属技能图标与读秒。\n• 签名证书不变，可直接覆盖安装。"
 }
