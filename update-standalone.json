@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 26,
-  "version_name": "0.2.0-dev",
+  "version_code": 27,
+  "version_name": "0.2.1-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "3175ed97ecad63c6d94091420dd3ab93f9590a350240a035b15980327d80fa98",
+  "sha256": "bd8bfce4687d588056860335f271cd8658dd9c0e55d1d3158eb27514834ec2b9",
   "size_bytes": 61506230,
-  "notes": "• 排行榜改成每周一零点清零，上周前三名拿称号，总分按本周重新算。\n• 成绩自动上传，不用再点提交；没起名字或当时断网，下次进游戏会自动补传。\n• 开局速度提升，前面不再慢吞吞。\n• 首页的排行榜入口会显示本周还剩几天。"
+  "notes": "• 修复排行榜打开是一片空白：之前榜上明明有人，却一个都不显示。\n• 上周前三的称号现在能正常显示在昵称后面。\n• 其余玩法与 0.2.0 相同，可直接覆盖安装。"
 }
