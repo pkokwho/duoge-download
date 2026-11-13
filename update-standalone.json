@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 25,
-  "version_name": "0.1.22-dev",
+  "version_code": 26,
+  "version_name": "0.2.0-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "15a9ad79238b464839078bb9df157b0a22d22d02d6f3e08355a2e37f677712fb",
-  "size_bytes": 61498038,
-  "notes": "• 修复手机上方的白边：画面现在铺满到屏幕顶端。\n• 设置页的存档、昵称、关于改成一眼能点的按钮行。\n• 角色界面新增技能介绍：舵哥被动「来了一次」、迪舵主动「原地升天」。\n• 迪舵技能改为落地后 25 秒冷却，并换成专属技能图标与读秒。\n• 签名证书不变，可直接覆盖安装。"
+  "sha256": "3175ed97ecad63c6d94091420dd3ab93f9590a350240a035b15980327d80fa98",
+  "size_bytes": 61506230,
+  "notes": "• 排行榜改成每周一零点清零，上周前三名拿称号，总分按本周重新算。\n• 成绩自动上传，不用再点提交；没起名字或当时断网，下次进游戏会自动补传。\n• 开局速度提升，前面不再慢吞吞。\n• 首页的排行榜入口会显示本周还剩几天。"
 }
