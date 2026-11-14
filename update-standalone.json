@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 27,
-  "version_name": "0.2.1-dev",
+  "version_code": 28,
+  "version_name": "0.2.2-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "bd8bfce4687d588056860335f271cd8658dd9c0e55d1d3158eb27514834ec2b9",
-  "size_bytes": 61506230,
-  "notes": "• 修复排行榜打开是一片空白：之前榜上明明有人，却一个都不显示。\n• 上周前三的称号现在能正常显示在昵称后面。\n• 其余玩法与 0.2.0 相同，可直接覆盖安装。"
+  "sha256": "5d040741cc6e2eeca14d383b83d129e2f80e4a2ddecf5c0e6532d090ba75dd4a",
+  "size_bytes": 61510326,
+  "notes": "• 排行榜合成一张：舵哥、迪舵一起排名，不用再管用哪个角色。\n• 每人每周只留最高分，后面的低分不会把最高分顶掉。\n• 结算页改成等服务端确认后再给结论，不再一跑完就写「已上传」。\n• 没超过最高分时，会明确告诉你本周最高分是多少。"
 }
