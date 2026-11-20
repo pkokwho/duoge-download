@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 28,
-  "version_name": "0.2.2-dev",
+  "version_code": 29,
+  "version_name": "0.2.3-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "5d040741cc6e2eeca14d383b83d129e2f80e4a2ddecf5c0e6532d090ba75dd4a",
-  "size_bytes": 61510326,
-  "notes": "• 排行榜合成一张：舵哥、迪舵一起排名，不用再管用哪个角色。\n• 每人每周只留最高分，后面的低分不会把最高分顶掉。\n• 结算页改成等服务端确认后再给结论，不再一跑完就写「已上传」。\n• 没超过最高分时，会明确告诉你本周最高分是多少。"
+  "sha256": "0fadc292ad8d97c69191b66ddb4fffbebb81d47b229474341aa3d7d665db190c",
+  "size_bytes": 61547663,
+  "notes": "• 新增血量：蹭到障碍扣 1 心并减速，正面撞直接结束。\n• 角色可升星，星级越高血量上限越高（1-3 心）。\n• 新增招募：金币抽取角色碎片，10 抽保底 3 片。"
 }
