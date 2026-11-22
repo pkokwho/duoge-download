@@ -23,19 +23,70 @@
   dd{margin:0;color:#cfe2f2;word-break:break-all;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
   .note{margin:20px 0 0;padding:12px 14px;border-radius:12px;background:rgba(255,196,80,.12);
     border:1px solid rgba(255,196,80,.34);color:#ffd98a;font-size:13px;line-height:1.6}
+  .share{margin:24px 0 0;padding:18px 16px;border-radius:16px;background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.10);text-align:center}
+  .share h2{margin:0 0 4px;font-size:15px;font-weight:600;color:#e8f2fb}
+  .share p.tip{margin:0 0 14px;font-size:12px;line-height:1.6;color:#8fa9c4}
+  .qr{display:block;width:170px;height:170px;margin:0 auto 14px;border-radius:12px;
+    background:#fff;padding:8px;image-rendering:pixelated}
+  button.copy{width:100%;padding:12px;border:0;border-radius:12px;cursor:pointer;
+    background:rgba(255,255,255,.12);color:#e8f2fb;font-size:14px;font-family:inherit}
+  button.copy:active{background:rgba(255,255,255,.2)}
+  p.url{margin:10px 0 0;font-size:11px;line-height:1.5;color:#7f9ab4;word-break:break-all;
+    font-family:ui-monospace,Menlo,Consolas,monospace}
 </style>
 </head>
 <body>
   <main class="card">
     <h1>舵哥快跑</h1>
     <p class="sub">0.2.5-dev · 独立新版 · Android 10+ / ARM64</p>
-    <a class="dl" href="duoge-parkour-latest.apk" download>下载安装包 · 66.9 MiB</a>
+    <!-- 本站是 GitHub Pages 备用入口，APK 并不在 GitHub 上，
+         所以下载按钮必须指向加速节点的绝对地址，并且带上 sharecode。 -->
+    <a class="dl" id="dl" href="https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF" download>下载安装包 · 66.9 MiB</a>
     <dl>
       <dt>版本</dt><dd>0.2.5-dev（versionCode 31）</dd>
       <dt>包名</dt><dd>org.duoge.parkour.standalone</dd>
       <dt>SHA-256</dt><dd>735a5649dc4c768643c559e8f381d55ba93759556580f9c892e361b976437f07</dd>
     </dl>
-    <p class="note">签名证书与 0.1.8 相同：0.1.8 / 0.1.8.1 可直接覆盖更新。手机上若装有 0.1.6 / 0.1.7，需先卸载再安装（本地纪录不会保留）。</p>
+    <p class="note">本站为 GitHub 备用入口；主站 https://duoge-apk.app.workbuddy.host/?sharecode=LECH35EKLF 速度更快。<br>签名证书与 0.1.8 相同：0.1.8 / 0.1.8.1 可直接覆盖更新。手机上若装有 0.1.6 / 0.1.7，需先卸载再安装（本地纪录不会保留）。</p>
+
+    <section class="share">
+      <h2>分享给朋友</h2>
+      <p class="tip">请分享下面这个链接（这是主站入口，国内速度更快）。<br>链接末尾的 <code>?sharecode=</code> 不能少，少了会打不开。</p>
+      <button class="copy" id="copy" type="button">复制主站完整链接</button>
+      <p class="url" id="url"></p>
+    </section>
   </main>
+<script>
+(function () {
+  var MAIN = 'https://duoge-apk.app.workbuddy.host/?sharecode=LECH35EKLF';
+  var urlBox = document.getElementById('url');
+  if (urlBox) { urlBox.textContent = MAIN; }
+  var btn = document.getElementById('copy');
+  if (!btn) { return; }
+  function done() {
+    btn.textContent = '已复制 ✓';
+    setTimeout(function () { btn.textContent = '复制主站完整链接'; }, 1600);
+  }
+  function fallback() {
+    var ta = document.createElement('textarea');
+    ta.value = MAIN;
+    ta.style.position = 'fixed'; ta.style.top = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    if (ok) { done(); } else { btn.textContent = '请长按下方链接手动复制'; }
+  }
+  btn.addEventListener('click', function () {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(MAIN).then(done, fallback);
+    } else {
+      fallback();
+    }
+  });
+})();
+</script>
 </body>
 </html>
