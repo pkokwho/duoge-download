@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 33,
-  "version_name": "0.2.7-dev",
+  "version_code": 34,
+  "version_name": "0.2.8-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "31bb477e6c3592e257c0cd17b8ffb0375508dc9c0323b29aeb19c87b56358a48",
-  "size_bytes": 70157568,
-  "notes": "▍本次更新\n· 技能键默认移到左下角：右手滑动、左手点技能更顺手（设置里可改回右边）\n· 修复霞姐技能在高速阶段障碍清理不完的问题，冲刺更安心\n· 修复复活后云端分数比结算页低的问题，榜单分数现在和结算完全一致\n· 修复霞姐的成绩无法上传排行榜的问题\n· 霞姐的丸子头更明显了，扎发一眼就能认出来\n\n▍其它\n存档、金币、角色星级、招募窗口都与上一版一致，直接覆盖安装即可。"
+  "sha256": "61df517552c3e77e9e7a7cf19d0d3d27c1ffc827c667bdef48d0d016111ceb5e",
+  "size_bytes": 73344773,
+  "notes": "▍本次更新\n· 全面性能优化：渲染开销大幅下降、显存占用降低约 50MB，长时间跑图更稳定\n· 三个主角模型减面 60%，造型与动作观感保持一致\n· 霞姐连吃金币会说话了：「好安逸哦」「真是个老吃家」\n· 修复霞姐技能释放中退出后，重开或换角色仍残留清障效果的问题\n\n▍其它\n存档、金币、角色星级、招募窗口都与上一版一致，直接覆盖安装即可。"
 }

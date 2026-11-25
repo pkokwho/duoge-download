@@ -3,7 +3,22 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.1.22-dev / 25（2026-11-07，最新）
+## 当前发布：0.2.8-dev / 34（2026-11-25，最新）
+
+- 内容：性能 v2（合批/单正交阴影/金币与浮字池/贴图改显存压缩）、三主角模型减面 60%、
+  霞姐专属连吃台词、修复「霞姐技能释放中退出后重开或换角色仍残留清障」的刷分漏洞。
+  源码记录见 `pkokwho/duoduo-parkour` 的 `docs/releases/0.2.8.md`。
+- **分发形态（0.2.0 起，别再按 0.1.x 理解）**：APK 只走 **GitHub Release 附件**（`v0.2.8`，
+  资产名 `duoge-parkour-0.2.8-dev-arm64-standalone.apk`），**不进 git 历史**；本仓库只提交
+  `index.html` 与 `update-standalone.json`。`downloads/` 里的 0.1.x 命名包是历史遗留，未被页面/清单引用。
+- APK 73,344,773 B，SHA-256 `61df517552c3e77e9e7a7cf19d0d3d27c1ffc827c667bdef48d0d016111ceb5e`，
+  证书 `d6105f4e…` 未变，versionCode=34，可直接覆盖 0.2.7 安装。
+- 加速节点（`https://duoge-apk.app.workbuddy.host/?sharecode=LECH35EKLF`）为主下载；
+  本仓库 Pages 为备用清单线路。旧包名 `update.json` 仍 **code 16 不许提升**。
+- 核验：加速节点首页 200 且与本仓库 `index.html` 逐字节一致、清单 code=34、页面直链 200、
+  完整下载 SHA 一致；Release 附件按 asset id 下载 SHA 一致；旧通道仍 16。
+
+## 历史：0.1.22-dev / 25（2026-11-07）
 
 - 内容：顶部白边修复（画面铺满状态栏/刘海区）、设置页三项整行按钮、角色页技能介绍、
   迪舵技能改「落地后 25 秒冷却」并换专属图标与扇形读秒。源码记录见 `docs/releases/0.1.22.md`。
