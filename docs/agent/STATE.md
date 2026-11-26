@@ -3,7 +3,20 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.2.9-dev / 35（2026-11-26，最新）
+## 当前发布：0.2.10-dev / 36（2026-11-26，最新）
+
+- 内容：修复云存档备份在覆盖安装/重启后报「操作未成功」、安卓真机签名校验提取异常导致成绩
+  未进公共榜；排行榜新增全服昵称唯一校验并改用账号真实身份核验名次。源码记录见
+  `pkokwho/duoduo-parkour` 的 `docs/releases/0.2.10.md`。
+- APK 74,626,974 B，SHA-256 `af4fd9dbbfca9abc318104e1d407ec9ecf014615f97b178a083cf68d49f6a49b`，
+  versionCode=36；Release 附件 `v0.2.10`（asset id 796307881）。
+- 中转 `publish-download/server.py` 使用轮换后的新 publishable Key（尾号 `WWZG`）；
+  **旧 Key（尾号 `rGaQ`）仍在 Supabase 侧有效，尚未禁用**，要彻底止血需在后台删除旧 Key。
+- 核验：加速节点 `/health` upstream 200、`POST /lb/rest/v1/rpc/account_rename` 返回
+  `{"ok":false,"error":"auth_required"}`（白名单已放行，不再是 403）、首页与本地逐字节一致、
+  清单 code=36、完整下载三方 SHA 一致；旧通道仍 16。
+
+## 历史：0.2.9-dev / 35（2026-11-26）
 
 - 内容：账号系统与云存档（注册/登录、手动备份、跨设备恢复）、周榜防刷升级（开局票据 +
   客户端完整性校验 + 服务端限流防洪）、排行榜统一走国内中转。源码记录见

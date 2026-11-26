@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 35,
-  "version_name": "0.2.9-dev",
+  "version_code": 36,
+  "version_name": "0.2.10-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "e22212f8fbc0524d3895212ff6a3cd8a95b656f5a0293921ab4cac7c1f230ebe",
-  "size_bytes": 73377694,
-  "notes": "▍本次更新\n· 新增账号系统与云存档：支持注册/登录、手动备份与跨设备恢复存档\n· 周排行榜防刷全面升级：开局票据校验、客户端完整性校验与服务端限流防洪\n· 排行榜统一走国内加速中转，连接更稳定\n\n▍其它\n存档、金币、角色星级、招募窗口均与上一版兼容，直接覆盖安装即可；旧版本客户端将不再允许提交新成绩。"
+  "sha256": "af4fd9dbbfca9abc318104e1d407ec9ecf014615f97b178a083cf68d49f6a49b",
+  "size_bytes": 74626974,
+  "notes": "▍本次更新\n· 修复云存档备份在覆盖安装/重启后报「操作未成功」的问题\n· 修复安卓真机签名校验提取异常导致成绩未进公共榜的问题\n· 排行榜新增全服昵称唯一校验，并改用账号真实身份核验名次，杜绝改名冒充榜上玩家\n· 补全云端与改名错误提示文案\n\n▍其它\n存档、金币、角色星级、招募窗口均与上一版兼容，直接覆盖安装即可。"
 }
