@@ -17,6 +17,10 @@
   本仓库 Pages 为备用清单线路。旧包名 `update.json` 仍 **code 16 不许提升**。
 - 核验：加速节点首页 200 且与本仓库 `index.html` 逐字节一致、清单 code=34、页面直链 200、
   完整下载 SHA 一致；Release 附件按 asset id 下载 SHA 一致；旧通道仍 16。
+- **Pages 部署插曲**：`d77445e` 推送时 GitHub 正遇 Actions/Pages partial outage，构建 success 但
+  部署阶段接口 500（线上仍 33）。平台恢复后 `gh run rerun 45651218778 --failed` 成功，
+  线上清单变为 34、首页 SHA `2f873be8…` 与加速节点逐字节一致。**部署失败先看 githubstatus，
+  不要重推内容**。
 
 ## 历史：0.1.22-dev / 25（2026-11-07）
 
