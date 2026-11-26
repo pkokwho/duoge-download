@@ -3,7 +3,20 @@
 - 日期：2026-10-31（Asia/Shanghai）。仓库 `pkokwho/duoge-download` / `main`；源码 `pkokwho/duoduo-parkour` / `master`。每次推送/发布均须更新两仓库相应记忆，区分推送、部署与实际 HTTP 核验。
 - 用户已授权测试正常后部署，现回复“都正常”，确认 0.1.6 手机安装/配色正常。发布条件已满足，无需重复索取许可。该反馈不等于全部设备、性能、旧版存档迁移或大陆测速通过。
 
-## 当前发布：0.2.8-dev / 34（2026-11-25，最新）
+## 当前发布：0.2.9-dev / 35（2026-11-26，最新）
+
+- 内容：账号系统与云存档（注册/登录、手动备份、跨设备恢复）、周榜防刷升级（开局票据 +
+  客户端完整性校验 + 服务端限流防洪）、排行榜统一走国内中转。源码记录见
+  `pkokwho/duoduo-parkour` 的 `docs/releases/0.2.9.md`。
+- APK 73,377,694 B，SHA-256 `e22212f8fbc0524d3895212ff6a3cd8a95b656f5a0293921ab4cac7c1f230ebe`，
+  证书 `d6105f4e…` 未变，versionCode=35；Release 附件 `v0.2.9`（asset id 795246424）。
+- 中转健康探针修正：`/health` 原先把 Supabase `/rest/v1/` 根路径当探针，该端点现在只接受
+  secret key（publishable 一律 401），会误报 Key 失效。已改为探 `/rest/v1/lb_top?select=rank&limit=1`，
+  现返回 `{"ok": true, "upstream": 200}`。**看到 upstream 401 先查探针，不要急着重配 Key。**
+- 仓库版 `site_server.py` 不再内置明文 Key（改读 `DUOGE_SUPABASE_KEY`）；仅供本机部署的
+  `publish-download/server.py` 才带 fallback，该目录被 `.gitignore` 忽略。
+
+## 历史：0.2.8-dev / 34（2026-11-25）
 
 - 内容：性能 v2（合批/单正交阴影/金币与浮字池/贴图改显存压缩）、三主角模型减面 60%、
   霞姐专属连吃台词、修复「霞姐技能释放中退出后重开或换角色仍残留清障」的刷分漏洞。

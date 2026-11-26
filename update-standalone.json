@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "version_code": 34,
-  "version_name": "0.2.8-dev",
+  "version_code": 35,
+  "version_name": "0.2.9-dev",
   "package_name": "org.duoge.parkour.standalone",
   "min_android_sdk": 29,
   "apk_url": "https://duoge-apk.app.workbuddy.host/duoge-parkour-latest.apk?sharecode=LECH35EKLF",
-  "sha256": "61df517552c3e77e9e7a7cf19d0d3d27c1ffc827c667bdef48d0d016111ceb5e",
-  "size_bytes": 73344773,
-  "notes": "▍本次更新\n· 全面性能优化：渲染开销大幅下降、显存占用降低约 50MB，长时间跑图更稳定\n· 三个主角模型减面 60%，造型与动作观感保持一致\n· 霞姐连吃金币会说话了：「好安逸哦」「真是个老吃家」\n· 修复霞姐技能释放中退出后，重开或换角色仍残留清障效果的问题\n\n▍其它\n存档、金币、角色星级、招募窗口都与上一版一致，直接覆盖安装即可。"
+  "sha256": "e22212f8fbc0524d3895212ff6a3cd8a95b656f5a0293921ab4cac7c1f230ebe",
+  "size_bytes": 73377694,
+  "notes": "▍本次更新\n· 新增账号系统与云存档：支持注册/登录、手动备份与跨设备恢复存档\n· 周排行榜防刷全面升级：开局票据校验、客户端完整性校验与服务端限流防洪\n· 排行榜统一走国内加速中转，连接更稳定\n\n▍其它\n存档、金币、角色星级、招募窗口均与上一版兼容，直接覆盖安装即可；旧版本客户端将不再允许提交新成绩。"
 }
