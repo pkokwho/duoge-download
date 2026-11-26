@@ -11,7 +11,7 @@
 - APK 74,626,974 B，SHA-256 `af4fd9dbbfca9abc318104e1d407ec9ecf014615f97b178a083cf68d49f6a49b`，
   versionCode=36；Release 附件 `v0.2.10`（asset id 796307881）。
 - 中转 `publish-download/server.py` 使用轮换后的新 publishable Key（尾号 `WWZG`）；
-  **旧 Key（尾号 `rGaQ`）仍在 Supabase 侧有效，尚未禁用**，要彻底止血需在后台删除旧 Key。
+  **旧 Key（尾号 `rGaQ`）已于 11-26 撤销，直连实测 401**，零停机轮换闭环完成。
 - 核验：加速节点 `/health` upstream 200、`POST /lb/rest/v1/rpc/account_rename` 返回
   `{"ok":false,"error":"auth_required"}`（白名单已放行，不再是 403）、首页与本地逐字节一致、
   清单 code=36、完整下载三方 SHA 一致；旧通道仍 16。
