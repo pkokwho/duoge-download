@@ -42,7 +42,7 @@ jobs:
         env:
           # 公开 key：设计上就随 APK 分发，不是机密。service_role 绝不写进这里。
           LB_URL: https://iqhbawtwwvgwotxvqjwz.supabase.co
-          LB_KEY: sb_publishable_7Ji28d-M0P70vKNLYS14WA_o4WDrGaQ
+          LB_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
         run: |
           set -euo pipefail
           code=$(curl -sS -o /tmp/out.json -w '%{http_code}' --max-time 20 \
